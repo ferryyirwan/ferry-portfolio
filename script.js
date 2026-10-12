@@ -5,13 +5,13 @@ if (yearElement) {
   yearElement.textContent = new Date().getFullYear();
 }
 
-// Lightbox Modal for Screenshots
+// Lightbox Modal for Screenshots & Photos
 document.addEventListener("DOMContentLoaded", () => {
   const lightbox = document.getElementById("image-lightbox");
   const lightboxImg = document.getElementById("lightbox-img");
   const lightboxCaption = document.getElementById("lightbox-caption");
-  const closeBtn = document.querySelector(".lightbox-close");
   const backdrop = document.querySelector(".lightbox-backdrop");
+  const dismissButtons = document.querySelectorAll(".lightbox-close, .lightbox-back-btn, .lightbox-bottom-back");
 
   if (!lightbox || !lightboxImg || !lightboxCaption) return;
 
@@ -22,15 +22,28 @@ document.addEventListener("DOMContentLoaded", () => {
     lightbox.classList.add("active");
     lightbox.setAttribute("aria-hidden", "false");
     document.body.style.overflow = "hidden";
+
+    // Push state to browser history so mobile hardware/gesture back returns to the page
+    try {
+      history.pushState({ lightboxOpen: true }, "");
+    } catch (_) {}
   };
 
-  const closeLightbox = () => {
+  const closeLightbox = (stepHistoryBack = true) => {
+    if (!lightbox.classList.contains("active")) return;
     lightbox.classList.remove("active");
     lightbox.setAttribute("aria-hidden", "true");
     document.body.style.overflow = "";
     setTimeout(() => {
       lightboxImg.src = "";
     }, 250);
+
+    // Pop the dummy history entry if closed via UI click/Esc
+    if (stepHistoryBack && history.state && history.state.lightboxOpen) {
+      try {
+        history.back();
+      } catch (_) {}
+    }
   };
 
   // Attach click listener to all screenshot and gallery items
@@ -47,13 +60,29 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  if (closeBtn) closeBtn.addEventListener("click", closeLightbox);
-  if (backdrop) backdrop.addEventListener("click", closeLightbox);
+  // Wire all dismiss buttons: top-left Back button, top-right Close button, bottom Back to page button
+  dismissButtons.forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      closeLightbox(true);
+    });
+  });
+
+  if (backdrop) {
+    backdrop.addEventListener("click", () => closeLightbox(true));
+  }
+
+  // Handle phone gesture back / hardware back button
+  window.addEventListener("popstate", () => {
+    if (lightbox.classList.contains("active")) {
+      closeLightbox(false);
+    }
+  });
 
   // Close with Escape key
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape" && lightbox.classList.contains("active")) {
-      closeLightbox();
+      closeLightbox(true);
     }
   });
 
