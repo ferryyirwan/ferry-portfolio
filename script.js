@@ -101,6 +101,85 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   }
+
+  // Mobile Navigation Drawer Toggle
+  const navToggle = document.getElementById("nav-toggle");
+  const mainNav = document.querySelector(".navbar nav");
+
+  if (navToggle && mainNav) {
+    const toggleMenu = () => {
+      const isOpen = mainNav.classList.toggle("mobile-open");
+      navToggle.classList.toggle("open", isOpen);
+      navToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+      document.body.classList.toggle("nav-drawer-open", isOpen);
+    };
+
+    const closeMenu = () => {
+      mainNav.classList.remove("mobile-open");
+      navToggle.classList.remove("open");
+      navToggle.setAttribute("aria-expanded", "false");
+      document.body.classList.remove("nav-drawer-open");
+    };
+
+    navToggle.addEventListener("click", (e) => {
+      e.stopPropagation();
+      toggleMenu();
+    });
+
+    // Close when clicking any nav link
+    mainNav.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", closeMenu);
+    });
+
+    // Close when clicking outside
+    document.addEventListener("click", (e) => {
+      if (!e.target.closest(".navbar") && mainNav.classList.contains("mobile-open")) {
+        closeMenu();
+      }
+    });
+
+    // Close with Escape key
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && mainNav.classList.contains("mobile-open")) {
+        closeMenu();
+      }
+    });
+  }
+
+  // Smooth animated scroll to top when clicking header logo <FERRY .DEV />
+  const logoElements = document.querySelectorAll(".navbar .logo");
+  logoElements.forEach((logo) => {
+    logo.addEventListener("click", (e) => {
+      const currentPath = window.location.pathname.replace(/\\/g, "/");
+      const isIndex = currentPath.endsWith("index.html") || 
+                      currentPath.endsWith("/ferry-portfolio/") || 
+                      currentPath.endsWith("/ferry-portfolio") || 
+                      currentPath.endsWith("/") || 
+                      currentPath === "";
+
+      // If already on the homepage OR if scrolled down on any page
+      if (isIndex || window.scrollY > 80) {
+        e.preventDefault();
+        window.scrollTo({
+          top: 0,
+          left: 0,
+          behavior: "smooth"
+        });
+
+        // Close mobile navigation drawer if open
+        const mainNav = document.querySelector(".navbar nav");
+        const navToggle = document.getElementById("nav-toggle");
+        if (mainNav && mainNav.classList.contains("mobile-open")) {
+          mainNav.classList.remove("mobile-open");
+          if (navToggle) {
+            navToggle.classList.remove("open");
+            navToggle.setAttribute("aria-expanded", "false");
+          }
+          document.body.classList.remove("nav-drawer-open");
+        }
+      }
+    });
+  });
 });
 
 
