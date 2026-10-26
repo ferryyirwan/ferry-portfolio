@@ -55,6 +55,7 @@ body {
   outline-offset: 3px;
 }
 :is(img, svg) { max-width: 100%; }
+.icon-arrow-up-right { display: inline-block; width: 15px; height: 15px; flex: 0 0 15px; vertical-align: middle; }
 :is(h1, h2, h3, h4, h5, h6) { font-family: var(--font-heading); text-wrap: balance; }
 :is(.eyebrow, .card-top-tag, .project-number, .project-meta .badge, .cat-layer-tag, .fact-label, .metric-lbl, .quick-nav-label, .gallery-counter, .award-photo-caption .tag, .activity-photo-caption .tag, .moment-tag, .campus-footer-tag) {
   font-family: var(--font-code);
