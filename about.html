@@ -3,612 +3,128 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="About Ferry Irwan Shah Azman - Journey, College Outstanding Performance Award, and Campus Life at KPM Beranang.">
-  <title>About & Honors | Ferry Irwan</title>
+  <meta name="description" content="Meet Ferry Irwan Shah Azman, a Computer Science student at KPM Beranang. A personal story of college, part-time work, music, puzzles and a family Proton Wira.">
+  <meta name="theme-color" content="#121516">
+  <title>About Me | Ferry Irwan</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="foundation.css">
+  <link rel="stylesheet" href="about-v2.css">
   <script src="script.js" defer></script>
+  <script src="about-motion.js" defer></script>
+  <script src="about-work-motion.js" defer></script>
+  <script src="about-stories-motion.js" defer></script>
 </head>
-<body class="about-page">
-  <!-- Sticky Glass Navbar -->
-  <header class="navbar">
+<body class="about-page about-v2">
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="navbar site-header">
     <div class="nav-container">
-      <a class="logo" href="index.html"><span class="code-bracket">&lt;</span>FERRY<span>.DEV</span><span class="code-bracket"> /&gt;</span></a>
-
+      <a class="logo site-brand" href="/" aria-label="Ferry Irwan — Home">Ferry Irwan<span aria-hidden="true">.</span></a>
       <div class="nav-right">
-        <nav aria-label="Main navigation">
-          <a href="index.html">Home</a>
-          <a href="about.html" class="active">About</a>
-          <a href="index.html#skills">Tech Stack</a>
-          <a href="projects.html" class="nav-projects-link">Projects <span class="nav-count-pill">19 SS</span></a>
-          <a href="index.html#contact">Contact</a>
+        <nav id="main-navigation" aria-label="Main navigation">
+          <a href="/">Home</a>
+          <a href="/about.html" class="active" aria-current="page">About</a>
+          <a href="/projects/">Projects</a>
+          <a href="/resume/">Resume</a>
+          <a href="/#contact">Contact</a>
         </nav>
-
-        <div class="nav-social-divider" aria-hidden="true"></div>
-
-        <div class="nav-socials">
-          <a href="https://github.com/ferryyirwan" target="_blank" rel="noopener noreferrer" class="nav-social-btn nav-social-github" title="GitHub Profile (@ferryyirwan)" aria-label="GitHub Profile">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
-            </svg>
-          </a>
-          <a href="https://www.linkedin.com/in/ferry-irwan-shah-azman-889b25428/" target="_blank" rel="noopener noreferrer" class="nav-social-btn nav-social-linkedin" title="LinkedIn Profile (Ferry Irwan Shah Azman)" aria-label="LinkedIn Profile">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-              <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76a1.69 1.69 0 0 0 1.69-1.69 1.69 1.69 0 0 0-1.69-1.68 1.69 1.69 0 0 0-1.69 1.68 1.69 1.69 0 0 0 1.69 1.69m1.4 9.74v-8.37H5.06v8.37h2.8z"/>
-            </svg>
-          </a>
-        </div>
-
-        <!-- Mobile Navigation Toggle Button -->
-        <button class="nav-toggle-btn" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
-          <span class="nav-toggle-icon"></span>
-        </button>
+        <button class="nav-toggle-btn" id="nav-toggle" type="button" aria-controls="main-navigation" aria-label="Toggle navigation menu" aria-expanded="false"><span class="nav-toggle-icon"></span></button>
       </div>
     </div>
   </header>
 
-  <main>
-    <!-- Page Header & Quick Navigation -->
-    <section class="section about-page-hero">
-      <div class="about-header-card">
-        <div class="about-header-top">
-          <div class="status-pill">
-            <span class="status-dot"></span>
-            <span>Seeking IT Internship · Available From 7 December</span>
-          </div>
-          <span class="eyebrow">DIPLOMA CS · KOLEJ PROFESIONAL MARA BERANANG</span>
-        </div>
-
-        <div class="about-hero-grid">
-          <!-- Left: Narrative & Navigation -->
-          <div class="about-hero-text">
-            <h1>About <span>Ferry Irwan</span></h1>
-            <p class="intro">
-              Computer Science student passionate about mobile engineering, backend architecture, and building production-ready applications. Here is a visual snapshot of my academic journey, awards, and campus life at <strong>Kolej Profesional MARA Beranang (KPMB)</strong>.
-            </p>
-
-            <div class="college-meta-strip">
-              <span class="college-meta-pill">🏛️ Kolej Profesional MARA Beranang</span>
-              <span class="college-meta-loc">Selangor, Malaysia</span>
-            </div>
-
-            <!-- Quick Jump Pills -->
-            <div class="about-nav-pills">
-              <a href="#awards" class="pill-btn">🏆 College Award</a>
-              <a href="#oc" class="pill-btn">🤝 Orientation Committee (OC)</a>
-              <a href="#csr" class="pill-btn">🌱 CSR Little Caliphs</a>
-              <a href="#cohort" class="pill-btn">👥 Campus & Cohort</a>
-              <a href="#assignments" class="pill-btn">💻 Dev & Rig</a>
-              <a href="#profile" class="pill-btn">⚡ Profile & Specs</a>
-            </div>
-          </div>
-
-          <!-- Right: Campus Landmark Photo Card (KPMB.jpeg) -->
-          <div class="about-hero-campus-card gallery-item" 
-               data-full="images/ferry/KPMB.jpeg" 
-               data-caption="Kolej Profesional MARA Beranang (KPMB) campus landmark and grounds where Ferry is pursuing his Diploma in Computer Science.">
-            <div class="about-hero-campus-wrap">
-              <img src="images/ferry/KPMB.jpeg" 
-                   alt="Kolej Profesional MARA Beranang campus landmark" 
-                   loading="eager">
-              <div class="thumb-overlay">
-                <span>Click to view campus ↗</span>
-              </div>
-              <div class="campus-floating-badge">
-                <span class="dot"></span>
-                <span>KPMB Campus</span>
-              </div>
-            </div>
-            <div class="about-hero-campus-footer">
-              <span class="campus-footer-tag">ACADEMIC GROUNDS</span>
-              <p class="campus-footer-name">Kolej Profesional MARA Beranang</p>
-            </div>
-          </div>
-        </div>
-      </div>
+  <main id="main-content" tabindex="-1">
+    <section class="about-container about-introduction" id="profile" aria-labelledby="about-heading">
+      <div class="about-intro-grid"><div class="about-intro-copy"><p class="about-label">01 / Introduction</p><h1 id="about-heading">About Me<span>.</span></h1><p class="about-intro-deck">Learning through code,<br>and everything around it.</p><p>I'm Ferry Irwan Shah Azman, a Diploma in Computer Science student at Kolej Profesional MARA Beranang. I'm interested in software development and enjoy exploring how web and mobile applications are built.</p><p>Academic projects give me a place to put new ideas into practice. Outside the classroom, part-time work has taught me responsibility, while college activities and personal interests keep me learning from people and everyday experience.</p><a class="about-text-link" href="#awards">My college journey <span aria-hidden="true">↓</span></a></div><figure class="about-photo intro-photo"><button class="about-photo-button" type="button" data-full="images/ferry/library.jpeg" data-gallery="introduction" data-caption="Studying with a laptop in the college library." aria-label="Enlarge photo: Studying with a laptop in the college library."><img src="images/ferry/library.jpeg" width="2560" height="1920" alt="Studying with a laptop in the college library." fetchpriority="high" decoding="async"><span class="photo-enlarge" aria-hidden="true">↗</span></button><figcaption>Studying with a laptop in the college library.</figcaption></figure></div>
+      <nav class="about-chapter-nav" aria-label="About page chapters"><a href="#awards">Education</a><a href="#campus-life">Campus life</a><a href="#work">Work</a><a href="#personal-stories">Personal stories</a></nav>
     </section>
 
-    <!-- ========================================================================= -->
-    <!-- 01: COLLEGE OUTSTANDING PERFORMANCE AWARD SPOTLIGHT -->
-    <!-- ========================================================================= -->
-    <section class="section" id="awards" style="border-top: none; padding-top: 10px;">
-      <div class="award-spotlight-card">
-        <div class="award-header-block">
-          <div class="award-title-area">
-            <div class="award-badge-pill">
-              <span class="dot"></span>
-              <span>HONORS & ACADEMIC EXCELLENCE</span>
-            </div>
-            <h3>College Outstanding Performance Award <span>(Anugerah Cemerlang Kolej)</span></h3>
-            <p class="award-subtitle">
-              Awarded by Kolej Profesional MARA Beranang for academic excellence and semester distinction.
-            </p>
-          </div>
-
-          <div class="award-honor-chip">
-            <span class="award-honor-val">ACADEMIC DISTINCTION</span>
-            <span class="award-honor-lbl">Kolej Profesional MARA Beranang</span>
-          </div>
-        </div>
-
-        <!-- 2 Certificate Showcase Photos -->
-        <div class="award-photos-grid">
-          <!-- Award Photo 1 -->
-          <div class="award-photo-card gallery-item" 
-               data-full="images/ferry/award1.jpeg" 
-               data-caption="College Outstanding Performance Award (Anugerah Cemerlang Kolej) - Certificate of Excellent Achievement at Kolej Profesional MARA Beranang.">
-            <div class="award-photo-wrap">
-              <img src="images/ferry/award1.jpeg" 
-                   alt="Ferry holding College Outstanding Performance Award Certificate" 
-                   loading="lazy">
-              <div class="thumb-overlay">
-                <span>Click to view certificate ↗</span>
-              </div>
-            </div>
-            <div class="award-photo-caption">
-              <span class="tag">Certificate of Excellent Achievement</span>
-              <p>Official College Outstanding Performance Award Presentation · Session 3</p>
-            </div>
-          </div>
-
-          <!-- Award Photo 2 -->
-          <div class="award-photo-card gallery-item" 
-               data-full="images/ferry/award2.jpeg" 
-               data-caption="Ceremony snapshot holding the Certificate of Excellent Achievement on campus grounds at Kolej Profesional MARA Beranang.">
-            <div class="award-photo-wrap">
-              <img src="images/ferry/award2.jpeg" 
-                   alt="Ferry ceremony selfie with Certificate of Excellence" 
-                   loading="lazy">
-              <div class="thumb-overlay">
-                <span>Click to view photo ↗</span>
-              </div>
-            </div>
-            <div class="award-photo-caption">
-              <span class="tag">Ceremony Day Snapshot</span>
-              <p>Celebrated at Kolej Profesional MARA Beranang campus</p>
-            </div>
-          </div>
-        </div>
-      </div>
+    <section class="about-container about-section" id="awards" aria-labelledby="education-heading">
+      <div class="about-section-heading"><p class="about-label">02 / Education & Recognition</p><h2 id="education-heading">A foundation<br>for what comes next.</h2></div>
+      <div class="education-layout"><div class="education-copy"><div class="education-information"><p class="education-start">Since <time datetime="2024-11">November 2024</time></p><h3>Diploma in<br>Computer Science</h3><p class="education-college">Kolej Profesional MARA Beranang</p><p>My studies bring together programming fundamentals and practical assignments. Working on web and mobile projects gives me room to test ideas, understand mistakes and gradually become more confident in the development process.</p><p>Presentations, group activities and campus involvement have also helped me practise explaining my work and communicating with others.</p></div><div class="recognition-note"><p class="about-label">Academic recognition</p><h4>College Outstanding Performance Award</h4><p class="award-local-name">Anugerah Cemerlang Kolej</p><p>Recognised by KPM Beranang for academic excellence. These photographs mark a meaningful part of my college journey.</p></div></div><div class="recognition-photos"><div class="about-photo-grid "><figure class="about-photo "><button class="about-photo-button" type="button" data-full="images/ferry/award1.jpeg" data-gallery="awards" data-caption="Holding the College Outstanding Performance Award certificate on campus." aria-label="Enlarge photo: Holding the College Outstanding Performance Award certificate on campus."><img src="images/ferry/award1.jpeg" width="1920" height="2560" alt="Holding the College Outstanding Performance Award certificate on campus." loading="lazy" decoding="async"><span class="photo-enlarge" aria-hidden="true">↗</span></button><figcaption>Holding the College Outstanding Performance Award certificate on campus.</figcaption></figure><figure class="about-photo "><button class="about-photo-button" type="button" data-full="images/ferry/award2.jpeg" data-gallery="awards" data-caption="A photograph with the award certificate at KPM Beranang." aria-label="Enlarge photo: A photograph with the award certificate at KPM Beranang."><img src="images/ferry/award2.jpeg" width="2560" height="1920" alt="A photograph with the award certificate at KPM Beranang." loading="lazy" decoding="async"><span class="photo-enlarge" aria-hidden="true">↗</span></button><figcaption>A photograph with the award certificate at KPM Beranang.</figcaption></figure></div></div></div>
     </section>
 
-    <!-- ========================================================================= -->
-    <!-- 02: ORIENTATION COMMITTEE (OC CLUB) -->
-    <!-- ========================================================================= -->
-    <section class="section" id="oc">
-      <div class="activity-spotlight-card oc-card">
-        <div class="activity-header-block">
-          <div class="activity-title-area">
-            <div class="activity-badge-pill pill-oc">
-              <span class="dot"></span>
-              <span>CAMPUS LEADERSHIP · KPM BERANANG</span>
-            </div>
-            <h3>Orientation Committee <span>(OC Club)</span></h3>
-            <p class="activity-subtitle">
-              Active committee member serving as <strong>Program Bureau Member</strong> in the Orientation Committee (OC) Club at Kolej Profesional MARA Beranang. Responsible for event scheduling, coordinating interactive modules, and facilitating the intake of hundreds of new incoming students throughout Orientation Week (Minggu Sua Kenal - MSK).
-            </p>
-          </div>
+    <section class="campus-section" id="campus-life" aria-labelledby="campus-heading"><div class="about-container about-section">
+      <div class="about-section-heading"><p class="about-label">03 / Campus life</p><h2 id="campus-heading">Life at KPM Beranang.</h2><p>Learning to contribute, communicate and work with others.</p></div>
+      <article class="campus-feature" id="oc"><div class="campus-feature-photo"><figure class="about-photo "><button class="about-photo-button" type="button" data-full="images/ferry/orientation_commitee/tour_with_newbie.jpeg" data-gallery="orientation" data-caption="An outdoor orientation activity with fellow facilitators and new students." aria-label="Enlarge photo: An outdoor orientation activity with fellow facilitators and new students."><img src="images/ferry/orientation_commitee/tour_with_newbie.jpeg" width="1280" height="720" alt="An outdoor orientation activity with fellow facilitators and new students." loading="lazy" decoding="async"><span class="photo-enlarge" aria-hidden="true">↗</span></button><figcaption>An outdoor orientation activity with fellow facilitators and new students.</figcaption></figure></div><div class="campus-feature-copy"><p class="about-label">Orientation Committee / Programme Bureau</p><h3>Helping new students<br>find their place.</h3><p class="feature-title">Orientation Committee</p><p>As part of the Programme Bureau, I helped plan orientation and Newbie games, coordinate activity schedules with the team, and organise student groups. During activities, I guided participants and supported the smooth running of the programme.</p><p>The experience gave me practical lessons in teamwork and communication: listening to the team, making instructions clear and responding when plans needed to change.</p><div class="about-journal"><button class="journal-toggle" type="button" data-journal-toggle="journal-disclosure-orientation" data-collapsed-label="Explore Orientation Gallery" data-expanded-label="Hide Orientation Gallery" aria-expanded="false" aria-controls="journal-gallery-orientation" hidden><svg class="journal-photo-icon" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="6" y="3" width="15" height="15" rx="2"/><path d="M3 7v12a2 2 0 0 0 2 2h12M6 14l4-4 4 4 3-3 4 4"/><circle cx="16" cy="7.5" r="1"/></svg><span class="journal-copy"><span class="journal-label">Explore Orientation Gallery</span><span class="journal-count">3 photographs</span></span><span class="journal-symbol" aria-hidden="true">+</span></button><details class="journal-disclosure" id="journal-disclosure-orientation"><summary class="journal-fallback">Orientation photo gallery · 3 photographs</summary><div class="about-photo-grid " id="journal-gallery-orientation"><figure class="about-photo "><button class="about-photo-button" type="button" data-full="images/ferry/orientation_commitee/tour_with_newbie.jpeg" data-gallery="orientation" data-caption="An outdoor orientation activity with fellow facilitators and new students." aria-label="Enlarge photo: An outdoor orientation activity with fellow facilitators and new students."><img src="images/ferry/orientation_commitee/tour_with_newbie.jpeg" width="1280" height="720" alt="An outdoor orientation activity with fellow facilitators and new students." loading="lazy" decoding="async"><span class="photo-enlarge" aria-hidden="true">↗</span></button><figcaption>An outdoor orientation activity with fellow facilitators and new students.</figcaption></figure><figure class="about-photo "><button class="about-photo-button" type="button" data-full="images/ferry/orientation_commitee/oc_group.jpeg" data-gallery="orientation" data-caption="A group photograph with the Orientation Committee." aria-label="Enlarge photo: A group photograph with the Orientation Committee."><img src="images/ferry/orientation_commitee/oc_group.jpeg" width="960" height="1280" alt="A group photograph with the Orientation Committee." loading="lazy" decoding="async"><span class="photo-enlarge" aria-hidden="true">↗</span></button><figcaption>A group photograph with the Orientation Committee.</figcaption></figure><figure class="about-photo "><button class="about-photo-button" type="button" data-full="images/ferry/orientation_commitee/orientation_day.jpeg" data-gallery="orientation" data-caption="Students gathered in the hall during orientation." aria-label="Enlarge photo: Students gathered in the hall during orientation."><img src="images/ferry/orientation_commitee/orientation_day.jpeg" width="2560" height="1920" alt="Students gathered in the hall during orientation." loading="lazy" decoding="async"><span class="photo-enlarge" aria-hidden="true">↗</span></button><figcaption>Students gathered in the hall during orientation.</figcaption></figure></div></details></div></div></article>
+      <article class="campus-feature campus-feature-reverse" id="csr"><div class="campus-feature-photo"><figure class="about-photo "><button class="about-photo-button" type="button" data-full="images/ferry/CSR/ferry.jpeg" data-gallery="csr" data-caption="Speaking on the microphone during the Little Caliphs programme." aria-label="Enlarge photo: Speaking on the microphone during the Little Caliphs programme."><img src="images/ferry/CSR/ferry.jpeg" width="1600" height="1066" alt="Speaking on the microphone during the Little Caliphs programme." loading="lazy" decoding="async"><span class="photo-enlarge" aria-hidden="true">↗</span></button><figcaption>Speaking on the microphone during the Little Caliphs programme.</figcaption></figure></div><div class="campus-feature-copy"><p class="about-label">CSR / Programme Bureau Lead</p><h3>Small activities.<br>Shared responsibility.</h3><p class="feature-title">CSR Programme — Little Caliphs</p><p>At Little Caliphs, Tasik Kesuma, I led the Programme Bureau in a team of seven, including myself. We planned activities for 40 children aged four to six, working together to keep the programme engaging and appropriate for their age.</p><p>I coordinated activities with six teammates and helped manage the programme flow. It was a chance to practise leadership through preparation, clear communication and working alongside the team.</p><div class="activity-stations"><p class="about-label">Five activity stations</p><ul><li>Duck Numbers</li><li>Letter Match</li><li>Giant Puzzle</li><li>Rubber Band Challenge</li><li>Ping Pong Balance</li></ul></div><div class="about-journal"><button class="journal-toggle" type="button" data-journal-toggle="journal-disclosure-csr" data-collapsed-label="Explore CSR Gallery" data-expanded-label="Hide CSR Gallery" aria-expanded="false" aria-controls="journal-gallery-csr" hidden><svg class="journal-photo-icon" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="6" y="3" width="15" height="15" rx="2"/><path d="M3 7v12a2 2 0 0 0 2 2h12M6 14l4-4 4 4 3-3 4 4"/><circle cx="16" cy="7.5" r="1"/></svg><span class="journal-copy"><span class="journal-label">Explore CSR Gallery</span><span class="journal-count">3 photographs</span></span><span class="journal-symbol" aria-hidden="true">+</span></button><details class="journal-disclosure" id="journal-disclosure-csr"><summary class="journal-fallback">CSR photo gallery · 3 photographs</summary><div class="about-photo-grid " id="journal-gallery-csr"><figure class="about-photo "><button class="about-photo-button" type="button" data-full="images/ferry/CSR/ferry.jpeg" data-gallery="csr" data-caption="Speaking on the microphone during the Little Caliphs programme." aria-label="Enlarge photo: Speaking on the microphone during the Little Caliphs programme."><img src="images/ferry/CSR/ferry.jpeg" width="1600" height="1066" alt="Speaking on the microphone during the Little Caliphs programme." loading="lazy" decoding="async"><span class="photo-enlarge" aria-hidden="true">↗</span></button><figcaption>Speaking on the microphone during the Little Caliphs programme.</figcaption></figure><figure class="about-photo "><button class="about-photo-button" type="button" data-full="images/ferry/CSR/csr_group.jpeg" data-gallery="csr" data-caption="The CSR team with children and staff at Little Caliphs." aria-label="Enlarge photo: The CSR team with children and staff at Little Caliphs."><img src="images/ferry/CSR/csr_group.jpeg" width="2560" height="1706" alt="The CSR team with children and staff at Little Caliphs." loading="lazy" decoding="async"><span class="photo-enlarge" aria-hidden="true">↗</span></button><figcaption>The CSR team with children and staff at Little Caliphs.</figcaption></figure><figure class="about-photo "><button class="about-photo-button" type="button" data-full="images/ferry/CSR/kids.jpeg" data-gallery="csr" data-caption="Children taking part in a group activity during the programme." aria-label="Enlarge photo: Children taking part in a group activity during the programme."><img src="images/ferry/CSR/kids.jpeg" width="1600" height="1066" alt="Children taking part in a group activity during the programme." loading="lazy" decoding="async"><span class="photo-enlarge" aria-hidden="true">↗</span></button><figcaption>Children taking part in a group activity during the programme.</figcaption></figure></div></details></div></div></article>
+      <div class="campus-journal" id="cohort"><h3 id="assignments">A few moments in between.</h3><p>Classmates, presentations and the places where I learn.</p><div class="about-journal"><button class="journal-toggle" type="button" data-journal-toggle="journal-disclosure-campus" data-collapsed-label="Browse Campus Photo Journal" data-expanded-label="Hide Campus Photo Journal" aria-expanded="false" aria-controls="journal-gallery-campus" hidden><svg class="journal-photo-icon" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="6" y="3" width="15" height="15" rx="2"/><path d="M3 7v12a2 2 0 0 0 2 2h12M6 14l4-4 4 4 3-3 4 4"/><circle cx="16" cy="7.5" r="1"/></svg><span class="journal-copy"><span class="journal-label">Browse Campus Photo Journal</span><span class="journal-count">4 photographs</span></span><span class="journal-symbol" aria-hidden="true">+</span></button><details class="journal-disclosure" id="journal-disclosure-campus"><summary class="journal-fallback">Campus photo journal · 4 photographs</summary><div class="about-photo-grid " id="journal-gallery-campus"><figure class="about-photo "><button class="about-photo-button" type="button" data-full="images/ferry/classmates.jpeg" data-gallery="campus" data-caption="With classmates and certificates in front of the KPM Beranang landmark." aria-label="Enlarge photo: With classmates and certificates in front of the KPM Beranang landmark."><img src="images/ferry/classmates.jpeg" width="1931" height="1448" alt="With classmates and certificates in front of the KPM Beranang landmark." loading="lazy" decoding="async"><span class="photo-enlarge" aria-hidden="true">↗</span></button><figcaption>With classmates and certificates in front of the KPM Beranang landmark.</figcaption></figure><figure class="about-photo "><button class="about-photo-button" type="button" data-full="images/ferry/KPMB.jpeg" data-gallery="campus" data-caption="The KPM Beranang campus landmark and grounds." aria-label="Enlarge photo: The KPM Beranang campus landmark and grounds."><img src="images/ferry/KPMB.jpeg" width="1920" height="2560" alt="The KPM Beranang campus landmark and grounds." loading="lazy" decoding="async"><span class="photo-enlarge" aria-hidden="true">↗</span></button><figcaption>The KPM Beranang campus landmark and grounds.</figcaption></figure><figure class="about-photo "><button class="about-photo-button" type="button" data-full="images/ferry/present.jpeg" data-gallery="campus" data-caption="Presenting in a college classroom." aria-label="Enlarge photo: Presenting in a college classroom."><img src="images/ferry/present.jpeg" width="1170" height="2009" alt="Presenting in a college classroom." loading="lazy" decoding="async"><span class="photo-enlarge" aria-hidden="true">↗</span></button><figcaption>Presenting in a college classroom.</figcaption></figure><figure class="about-photo "><button class="about-photo-button" type="button" data-full="images/ferry/project.jpeg" data-gallery="campus" data-caption="A personal development setup with a laptop and mobile device." aria-label="Enlarge photo: A personal development setup with a laptop and mobile device."><img src="images/ferry/project.jpeg" width="1440" height="2560" alt="A personal development setup with a laptop and mobile device." loading="lazy" decoding="async"><span class="photo-enlarge" aria-hidden="true">↗</span></button><figcaption>A personal development setup with a laptop and mobile device.</figcaption></figure></div></details></div></div>
+    </div></section>
 
-          <div class="activity-role-chip">
-            <span class="activity-role-val">PROGRAM BUREAU MEMBER</span>
-            <span class="activity-role-lbl">Orientation Committee (OC Club)</span>
-          </div>
+    <section class="about-container about-section" id="work" aria-labelledby="work-heading"><div class="about-section-heading"><p class="about-label">04 / Work & Responsibility</p><h2 id="work-heading">Still Working,<br>Still Learning.</h2><p>Part-time work has been a practical education in discipline, people and responsibility.</p></div>
+      <ol class="work-timeline">
+        <li class="work-entry"><div class="work-milestone"><span class="timeline-dot" aria-hidden="true"></span><p class="about-label">01 / From around age 15</p><span class="work-period">Part-time & weekends</span></div><article class="work-story"><div class="work-story-copy"><h3>Catering Crew<br>& Team Coordination</h3><p>I started catering work at approximately 15 and continued doing part-time shifts, including weekends, to earn money for my own expenses. The work involves preparing food and equipment, transporting and arranging equipment, setting up service areas and serving guests.</p><p>During busy events, I've also helped coordinate fellow workers. It has taught me to communicate clearly, support teammates and stay focused when time is tight.</p><p class="work-takeaway">A lesson in showing up, staying organised and sharing the workload.</p></div><figure class="about-photo work-cover"><button class="about-photo-button" type="button" data-full="images/work/work5.jpeg" data-gallery="catering" data-caption="Working beside the buffet service area." aria-label="Enlarge photo: Working beside the buffet service area."><img src="images/work/work5.jpeg" width="768" height="1024" alt="Working beside the buffet service area." loading="lazy" decoding="async"><span class="photo-enlarge" aria-hidden="true">↗</span></button><figcaption>Working beside the buffet service area.</figcaption></figure><figure class="about-photo catering-support-photo"><button class="about-photo-button" type="button" data-full="images/work/work11.jpeg" data-caption="With catering teammates and my boss during an event." aria-label="Enlarge photo: With catering teammates and my boss during an event."><img src="images/work/work11.jpeg" width="2560" height="1440" alt="With catering teammates and my boss during an event." loading="lazy" decoding="async"><span class="photo-enlarge" aria-hidden="true">↗</span></button><figcaption>With catering teammates and my boss during an event.</figcaption></figure><div class="work-journal"><div class="about-journal"><button class="journal-toggle" type="button" data-journal-toggle="journal-disclosure-catering" data-collapsed-label="Explore Catering Gallery" data-expanded-label="Hide Catering Gallery" aria-expanded="false" aria-controls="journal-gallery-catering" hidden><svg class="journal-photo-icon" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="6" y="3" width="15" height="15" rx="2"/><path d="M3 7v12a2 2 0 0 0 2 2h12M6 14l4-4 4 4 3-3 4 4"/><circle cx="16" cy="7.5" r="1"/></svg><span class="journal-copy"><span class="journal-label">Explore Catering Gallery</span><span class="journal-count">5 photographs</span></span><span class="journal-symbol" aria-hidden="true">+</span></button><details class="journal-disclosure" id="journal-disclosure-catering"><summary class="journal-fallback">Catering photo gallery · 5 photographs</summary><div class="about-photo-grid " id="journal-gallery-catering"><figure class="about-photo "><button class="about-photo-button" type="button" data-full="images/work/work4.jpeg" data-gallery="catering" data-caption="With a teammate in catering service attire." aria-label="Enlarge photo: With a teammate in catering service attire."><img src="images/work/work4.jpeg" width="1206" height="1653" alt="With a teammate in catering service attire." loading="lazy" decoding="async"><span class="photo-enlarge" aria-hidden="true">↗</span></button><figcaption>With a teammate in catering service attire.</figcaption></figure><figure class="about-photo "><button class="about-photo-button" type="button" data-full="images/work/work5.jpeg" data-gallery="catering" data-caption="Working beside the buffet service area." aria-label="Enlarge photo: Working beside the buffet service area."><img src="images/work/work5.jpeg" width="768" height="1024" alt="Working beside the buffet service area." loading="lazy" decoding="async"><span class="photo-enlarge" aria-hidden="true">↗</span></button><figcaption>Working beside the buffet service area.</figcaption></figure><figure class="about-photo "><button class="about-photo-button" type="button" data-full="images/work/work6.jpeg" data-gallery="catering" data-caption="A catering preparation area with serving equipment." aria-label="Enlarge photo: A catering preparation area with serving equipment."><img src="images/work/work6.jpeg" width="1920" height="2560" alt="A catering preparation area with serving equipment." loading="lazy" decoding="async"><span class="photo-enlarge" aria-hidden="true">↗</span></button><figcaption>A catering preparation area with serving equipment.</figcaption></figure><figure class="about-photo "><button class="about-photo-button" type="button" data-full="images/work/work10.jpeg" data-gallery="catering" data-caption="With fellow catering workers at an event venue." aria-label="Enlarge photo: With fellow catering workers at an event venue."><img src="images/work/work10.jpeg" width="2560" height="1920" alt="With fellow catering workers at an event venue." loading="lazy" decoding="async"><span class="photo-enlarge" aria-hidden="true">↗</span></button><figcaption>With fellow catering workers at an event venue.</figcaption></figure><figure class="about-photo "><button class="about-photo-button" type="button" data-full="images/work/work11.jpeg" data-gallery="catering" data-caption="A group photograph with catering teammates at an event." aria-label="Enlarge photo: A group photograph with catering teammates at an event."><img src="images/work/work11.jpeg" width="2560" height="1440" alt="A group photograph with catering teammates at an event." loading="lazy" decoding="async"><span class="photo-enlarge" aria-hidden="true">↗</span></button><figcaption>A group photograph with catering teammates at an event.</figcaption></figure></div></details></div></div></article></li>
+        <li class="work-entry"><div class="work-milestone"><span class="timeline-dot" aria-hidden="true"></span><p class="about-label">02 / After SPM</p><span class="work-period">Also during college holidays</span></div><article class="work-story"><div class="work-story-copy"><h3>Chicken Rice<br>Restaurant Crew</h3><p>After completing SPM, I worked at a chicken rice restaurant and returned to this kind of work during college holidays. My responsibilities included taking orders, assisting with food preparation, serving food, cleaning and helping with daily operations.</p><p>Working closely with the restaurant owner taught me to notice what needed doing and contribute to the everyday routines that keep a small restaurant running.</p><p class="work-takeaway">A lesson in attentiveness, consistency and taking care of the details.</p></div><figure class="about-photo work-cover"><button class="about-photo-button" type="button" data-full="images/work/work8.jpeg" data-gallery="restaurant" data-caption="Preparing chicken rice during a restaurant shift." aria-label="Enlarge photo: Preparing chicken rice during a restaurant shift."><img src="images/work/work8.jpeg" width="1206" height="2120" alt="Preparing chicken rice during a restaurant shift." loading="lazy" decoding="async"><span class="photo-enlarge" aria-hidden="true">↗</span></button><figcaption>Preparing chicken rice during a restaurant shift.</figcaption></figure><div class="work-journal"><div class="about-journal"><button class="journal-toggle" type="button" data-journal-toggle="journal-disclosure-restaurant" data-collapsed-label="Explore Restaurant Gallery" data-expanded-label="Hide Restaurant Gallery" aria-expanded="false" aria-controls="journal-gallery-restaurant" hidden><svg class="journal-photo-icon" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="6" y="3" width="15" height="15" rx="2"/><path d="M3 7v12a2 2 0 0 0 2 2h12M6 14l4-4 4 4 3-3 4 4"/><circle cx="16" cy="7.5" r="1"/></svg><span class="journal-copy"><span class="journal-label">Explore Restaurant Gallery</span><span class="journal-count">4 photographs</span></span><span class="journal-symbol" aria-hidden="true">+</span></button><details class="journal-disclosure" id="journal-disclosure-restaurant"><summary class="journal-fallback">Restaurant photo gallery · 4 photographs</summary><div class="about-photo-grid " id="journal-gallery-restaurant"><figure class="about-photo "><button class="about-photo-button" type="button" data-full="images/work/work2.jpeg" data-gallery="restaurant" data-caption="Packed chicken rice meals prepared for restaurant orders." aria-label="Enlarge photo: Packed chicken rice meals prepared for restaurant orders."><img src="images/work/work2.jpeg" width="1920" height="2560" alt="Packed chicken rice meals prepared for restaurant orders." loading="lazy" decoding="async"><span class="photo-enlarge" aria-hidden="true">↗</span></button><figcaption>Packed chicken rice meals prepared for restaurant orders.</figcaption></figure><figure class="about-photo "><button class="about-photo-button" type="button" data-full="images/work/work7.jpeg" data-gallery="restaurant" data-caption="At work inside the chicken rice restaurant." aria-label="Enlarge photo: At work inside the chicken rice restaurant."><img src="images/work/work7.jpeg" width="1206" height="2129" alt="At work inside the chicken rice restaurant." loading="lazy" decoding="async"><span class="photo-enlarge" aria-hidden="true">↗</span></button><figcaption>At work inside the chicken rice restaurant.</figcaption></figure><figure class="about-photo "><button class="about-photo-button" type="button" data-full="images/work/work8.jpeg" data-gallery="restaurant" data-caption="Preparing chicken for service at the restaurant." aria-label="Enlarge photo: Preparing chicken for service at the restaurant."><img src="images/work/work8.jpeg" width="1206" height="2120" alt="Preparing chicken for service at the restaurant." loading="lazy" decoding="async"><span class="photo-enlarge" aria-hidden="true">↗</span></button><figcaption>Preparing chicken for service at the restaurant.</figcaption></figure><figure class="about-photo "><button class="about-photo-button" type="button" data-full="images/work/work9.jpeg" data-gallery="restaurant" data-caption="A moment at the restaurant service counter." aria-label="Enlarge photo: A moment at the restaurant service counter."><img src="images/work/work9.jpeg" width="1206" height="2118" alt="A moment at the restaurant service counter." loading="lazy" decoding="async"><span class="photo-enlarge" aria-hidden="true">↗</span></button><figcaption>A moment at the restaurant service counter.</figcaption></figure></div></details></div></div></article></li>
+      </ol>
+      <article class="work-reflection" aria-labelledby="work-reflection-heading">
+        <figure class="about-photo work-reflection-photo">
+          <button class="about-photo-button" type="button" data-full="images/work/work12.jpeg" data-caption="A moment of rest during a demanding workday." aria-label="Enlarge photo: A moment of rest during a demanding workday.">
+            <img src="images/work/work12.jpeg" width="2560" height="2393" alt="A moment of rest during a demanding workday." loading="lazy" decoding="async">
+            <span class="photo-enlarge" aria-hidden="true">↗</span>
+          </button>
+          <figcaption>A moment of rest during a demanding workday.</figcaption>
+        </figure>
+        <div class="work-reflection-copy">
+          <h3 id="work-reflection-heading">The Days That Taught Me to Keep Going.</h3>
+          <p>I started working at a young age, and not every day was easy. There were times when I felt completely exhausted, but I kept going because I wanted to earn my own money and become more independent.</p>
+          <p>Looking back, those long working days taught me more than just how to do a job. They taught me responsibility, resilience, and the value of working hard for the things I want in life.</p>
         </div>
-
-        <!-- Highlights Row -->
-        <div class="activity-highlights">
-          <div class="activity-highlight-item">
-            <span class="icon">&gt;</span>
-            <span><strong>Role:</strong> Active Member · Program Bureau</span>
-          </div>
-          <div class="activity-highlight-item">
-            <span class="icon">&gt;</span>
-            <span><strong>Focus:</strong> Event Scheduling & Orientation Week (MSK) Modules</span>
-          </div>
-          <div class="activity-highlight-item">
-            <span class="icon">&gt;</span>
-            <span><strong>Impact:</strong> Mentored & guided hundreds of newly enrolled students</span>
-          </div>
-        </div>
-
-        <!-- 3 Photos Split Grid (1 Tall Column + 2 Stacked Cards) -->
-        <div class="activity-grid-split">
-          <!-- Photo 1: OC Group Team Photo (Vertical/Tall) -->
-          <div class="activity-photo-card gallery-item" 
-               data-full="images/ferry/orientation_commitee/oc_group.jpeg" 
-               data-caption="Orientation Committee (OC) club members and facilitators in official team jerseys at Kolej Profesional MARA Beranang.">
-            <div class="activity-photo-wrap aspect-tall">
-              <img src="images/ferry/orientation_commitee/oc_group.jpeg" 
-                   alt="Orientation Committee group members at KPM Beranang" 
-                   loading="lazy">
-              <div class="thumb-overlay">
-                <span>Click to view group photo ↗</span>
-              </div>
-            </div>
-            <div class="activity-photo-caption">
-              <span class="tag">Orientation Committee Cohort</span>
-              <p>Committee Members & Student Facilitators · OC Club KPM Beranang</p>
-            </div>
-          </div>
-
-          <!-- Stacked Column: Orientation Day + Campus Tour -->
-          <div class="activity-stacked-cards">
-            <!-- Photo 2: Orientation Day Huge Crowd -->
-            <div class="activity-photo-card gallery-item" 
-                 data-full="images/ferry/orientation_commitee/orientation_day.jpeg" 
-                 data-caption="Vibrant assembly hall atmosphere during Orientation Day (Minggu Sua Kenal), welcoming hundreds of newly enrolled students at KPM Beranang.">
-              <div class="activity-photo-wrap aspect-wide">
-                <img src="images/ferry/orientation_commitee/orientation_day.jpeg" 
-                     alt="Crowded assembly hall during Orientation Day welcoming new students" 
-                     loading="lazy">
-                <div class="thumb-overlay">
-                  <span>Click to view hall atmosphere ↗</span>
-                </div>
-              </div>
-              <div class="activity-photo-caption">
-                <span class="tag">Orientation Day · Student Intake</span>
-                <p>Assembly hall gathering and student welcoming ceremony at KPM Beranang</p>
-              </div>
-            </div>
-
-            <!-- Photo 3: Campus Tour with Newbies -->
-            <div class="activity-photo-card gallery-item" 
-                 data-full="images/ferry/orientation_commitee/tour_with_newbie.jpeg" 
-                 data-caption="Ferry and fellow OC facilitators leading outdoor campus orientation tours and ice-breaking activities with incoming students.">
-              <div class="activity-photo-wrap aspect-wide">
-                <img src="images/ferry/orientation_commitee/tour_with_newbie.jpeg" 
-                     alt="Ferry and OC facilitators leading campus tour with new students" 
-                     loading="lazy">
-                <div class="thumb-overlay">
-                  <span>Click to view tour photo ↗</span>
-                </div>
-              </div>
-              <div class="activity-photo-caption">
-                <span class="tag">Campus Tour & Facilitation</span>
-                <p>Engaging campus exploration and mentorship sessions with groups of new students</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      </article>
     </section>
 
-    <!-- ========================================================================= -->
-    <!-- 03: CSR PROGRAM (TADIKA LITTLE CALIPHS TASEK KESUMA) -->
-    <!-- ========================================================================= -->
-    <section class="section" id="csr">
-      <div class="activity-spotlight-card csr-card">
-        <div class="activity-header-block">
-          <div class="activity-title-area">
-            <div class="activity-badge-pill pill-csr">
-              <span class="dot"></span>
-              <span>COMMUNITY IMPACT · SEMESTER 6 CSR</span>
-            </div>
-            <h3>CSR Program: <span>Tadika Little Caliphs</span></h3>
-            <p class="activity-subtitle">
-              Executed a Corporate Social Responsibility (CSR) project for the <strong>Semester 6</strong> curriculum at <strong>Tadika Little Caliphs, Bandar Tasik Kesuma</strong>. Led the committee as <strong>Head of Program Bureau</strong>—designing the comprehensive itinerary, emceeing the ceremony, and directing sports day games and interactive learning modules for kindergarten pupils.
-            </p>
-          </div>
-
-          <div class="activity-role-chip">
-            <span class="activity-role-val">HEAD OF PROGRAM BUREAU</span>
-            <span class="activity-role-lbl">Semester 6 CSR Project (Little Caliphs)</span>
-          </div>
-        </div>
-
-        <!-- Highlights Row -->
-        <div class="activity-highlights">
-          <div class="activity-highlight-item">
-            <span class="icon">&gt;</span>
-            <span><strong>Role:</strong> Head of Program Bureau</span>
-          </div>
-          <div class="activity-highlight-item">
-            <span class="icon">&gt;</span>
-            <span><strong>Venue:</strong> Tadika Little Caliphs, Bandar Tasik Kesuma</span>
-          </div>
-          <div class="activity-highlight-item">
-            <span class="icon">&gt;</span>
-            <span><strong>Recognition:</strong> Awarded Official Certificate of Appreciation</span>
-          </div>
-        </div>
-
-        <!-- 3 Photos Grid for CSR (1 Top Full-width Team + 2 Bottom Split) -->
-        <div class="activity-grid-csr">
-          <!-- Photo 1: Team Photo with Certificate of Appreciation (Full Width) -->
-          <div class="activity-photo-card card-wide gallery-item" 
-               data-full="images/ferry/CSR/csr_group.jpeg" 
-               data-caption="Semester 6 CSR project committee members posing with the official Certificate of Appreciation at Tadika Little Caliphs Bandar Tasik Kesuma.">
-            <div class="activity-photo-wrap aspect-wide">
-              <img src="images/ferry/CSR/csr_group.jpeg" 
-                   alt="CSR project team at Tadika Little Caliphs Tasik Kesuma" 
-                   loading="lazy">
-              <div class="thumb-overlay">
-                <span>Click to view team & certificate ↗</span>
-              </div>
-            </div>
-            <div class="activity-photo-caption">
-              <span class="tag">Certificate of Appreciation & CSR Team</span>
-              <p>Full Semester 6 CSR project committee with the official Certificate of Appreciation</p>
-            </div>
-          </div>
-
-          <!-- Photo 2: Ferry Emceeing / Leading Program -->
-          <div class="activity-photo-card gallery-item" 
-               data-full="images/ferry/CSR/ferry.jpeg" 
-               data-caption="Emceeing and directing the CSR event live with energy and confidence as Head of Program Bureau at Tadika Little Caliphs.">
-            <div class="activity-photo-wrap aspect-wide">
-              <img src="images/ferry/CSR/ferry.jpeg" 
-                   alt="Hosting the CSR program at Little Caliphs" 
-                   loading="lazy">
-              <div class="thumb-overlay">
-                <span>Click to view photo ↗</span>
-              </div>
-            </div>
-            <div class="activity-photo-caption">
-              <span class="tag">Leadership & Program Emceeing</span>
-              <p>Directing interactive activities on the microphone as Head of Program Bureau</p>
-            </div>
-          </div>
-
-          <!-- Photo 3: Kids Sports Day & Activities -->
-          <div class="activity-photo-card gallery-item" 
-               data-full="images/ferry/CSR/kids.jpeg" 
-               data-caption="Children of Tadika Little Caliphs Tasik Kesuma joyfully participating in sports day games and interactive learning activities.">
-            <div class="activity-photo-wrap aspect-wide">
-              <img src="images/ferry/CSR/kids.jpeg" 
-                   alt="Little Caliphs kindergarten kids happily joining CSR sports day games" 
-                   loading="lazy">
-              <div class="thumb-overlay">
-                <span>Click to view kids activity ↗</span>
-              </div>
-            </div>
-            <div class="activity-photo-caption">
-              <span class="tag">Sports Day & Community Outreach</span>
-              <p>Enthusiastic kindergarten students engaging in aerobic warm-ups and fun sports day games</p>
-            </div>
-          </div>
-        </div>
+    <section class="about-personal" id="personal-stories" aria-labelledby="personal-heading"><svg class="about-wireframe" viewBox="0 0 500 500" fill="none" aria-hidden="true" focusable="false"><g stroke="currentColor"><circle cx="250" cy="250" r="190"/><ellipse cx="250" cy="250" rx="90" ry="190"/><ellipse cx="250" cy="250" rx="190" ry="70"/><path d="M60 250h380M250 60v380M116 116l268 268M116 384l268-268"/></g></svg><div class="about-container about-section"><div class="about-section-heading personal-section-heading"><p class="about-label">05 / Personal stories</p><h2 id="personal-heading">Beyond the Code.</h2><p>Some of the things that keep me curious — puzzles, music, a family car and a different way of looking at the world.</p></div>
+      <p class="story-instruction">Choose a story to take a closer look.</p>
+      <div class="personal-story-grid" id="personal-story-grid">
+        <button class="personal-story-card story-rubik" type="button" id="story-trigger-rubik" data-story-target="story-rubik" aria-expanded="false" aria-controls="story-rubik"><span class="story-cover"><img src="images/personal/rubik/rubik1.jpeg" width="2560" height="1920" alt="" loading="lazy" decoding="async"></span><span class="story-card-copy"><span class="about-label">Rubik’s Cube</span><span class="story-card-title">The Art of Solving</span><span class="story-card-subtitle">Patterns, patience and one more attempt.</span><span class="story-card-action"><span>Read the story</span><span class="story-card-symbol" aria-hidden="true">+</span></span></span></button>
+        <button class="personal-story-card story-guitar" type="button" id="story-trigger-guitar" data-story-target="story-guitar" aria-expanded="false" aria-controls="story-guitar"><span class="story-cover"><img src="images/personal/guitar/guitar3.jpeg" width="1920" height="2560" alt="" loading="lazy" decoding="async"></span><span class="story-card-copy"><span class="about-label">Guitar & Music</span><span class="story-card-title">Finding My Rhythm</span><span class="story-card-subtitle">A creative outlet, one chord at a time.</span><span class="story-card-action"><span>Read the story</span><span class="story-card-symbol" aria-hidden="true">+</span></span></span></button>
+        <button class="personal-story-card story-wira" type="button" id="story-trigger-wira" data-story-target="story-wira" aria-expanded="false" aria-controls="story-wira"><span class="story-cover"><img src="images/personal/wira/wira7.jpeg" width="1920" height="2560" alt="" loading="lazy" decoding="async"></span><span class="story-card-copy"><span class="about-label">2004 Proton Wira</span><span class="story-card-title">More Than Just a Car</span><span class="story-card-subtitle">A family story, carried forward.</span><span class="story-card-action"><span>Read the story</span><span class="story-card-symbol" aria-hidden="true">+</span></span></span></button>
+        <button class="personal-story-card story-camera" type="button" id="story-trigger-camera" data-story-target="story-camera" aria-expanded="false" aria-controls="story-camera"><span class="story-cover"><img src="images/personal/cameraman/camera2.jpeg" width="2560" height="1920" alt="" loading="lazy" decoding="async"></span><span class="story-card-copy"><span class="about-label">Photography & Filming</span><span class="story-card-title">Behind the Lens</span><span class="story-card-subtitle">Learning to notice the details.</span><span class="story-card-action"><span>Read the story</span><span class="story-card-symbol" aria-hidden="true">+</span></span></span></button>
       </div>
-    </section>
-
-    <!-- ========================================================================= -->
-    <!-- 04: CAMPUS LIFE & HANDS-ON DEVELOPMENT JOURNEY -->
-    <!-- ========================================================================= -->
-    <section class="section" id="cohort">
-      <div class="section-header-block">
-        <p class="eyebrow">CAMPUS LIFE & TEAMWORK</p>
-        <h2>Cohort, Projects & Campus Journey</h2>
-        <p class="section-subtitle">
-          Collaborative learning, practical software assignments, and technical presentations at KPM Beranang.
-        </p>
+      <div class="story-panel-host" id="story-panel-host" hidden>
+        <article class="personal-story-panel" id="story-rubik" role="region" aria-labelledby="story-trigger-rubik" tabindex="-1" hidden><div class="story-panel-heading"><div><p class="about-label">Rubik’s Cube / A personal story</p><h3>The Art of Solving</h3></div><button class="story-close" type="button" data-close-story>Close story <span aria-hidden="true">×</span></button></div><div class="story-prose"><p>I started learning the Rubik’s Cube at around 16, with YouTube tutorials and a lot of repeated attempts. Learning independently meant slowing down, remembering patterns and practising the same steps until they began to make sense.</p><p>What keeps me interested is the balance between recognising a familiar pattern and working out what to do next. Memorisation helps, but so does paying attention to the way each move changes the puzzle.</p><p>My best solve was approximately 17 seconds — an unusually lucky solve, rather than an official competition record. I usually average around 30 seconds. Improving those everyday solves is what makes practice satisfying.</p></div><div class="about-photo-grid "><figure class="about-photo "><button class="about-photo-button" type="button" data-full="images/personal/rubik/rubik1.jpeg" data-gallery="rubik" data-caption="A collection of cubes and twisty puzzles." aria-label="Enlarge photo: A collection of cubes and twisty puzzles."><img src="images/personal/rubik/rubik1.jpeg" width="2560" height="1920" alt="A collection of cubes and twisty puzzles." loading="lazy" decoding="async"><span class="photo-enlarge" aria-hidden="true">↗</span></button><figcaption>A collection of cubes and twisty puzzles.</figcaption></figure><figure class="about-photo "><button class="about-photo-button" type="button" data-full="images/personal/rubik/rubik3.jpeg" data-gallery="rubik" data-caption="Practising a cube solve." aria-label="Enlarge photo: Practising a cube solve."><img src="images/personal/rubik/rubik3.jpeg" width="1206" height="2122" alt="Practising a cube solve." loading="lazy" decoding="async"><span class="photo-enlarge" aria-hidden="true">↗</span></button><figcaption>Practising a cube solve.</figcaption></figure><figure class="about-photo "><button class="about-photo-button" type="button" data-full="images/personal/rubik/rubik2.jpeg" data-gallery="rubik" data-caption="Cubes on a desk in the classroom." aria-label="Enlarge photo: Cubes on a desk in the classroom."><img src="images/personal/rubik/rubik2.jpeg" width="1920" height="2560" alt="Cubes on a desk in the classroom." loading="lazy" decoding="async"><span class="photo-enlarge" aria-hidden="true">↗</span></button><figcaption>Cubes on a desk in the classroom.</figcaption></figure></div><div class="story-panel-end"><button class="story-close" type="button" data-close-story>Back to the stories <span aria-hidden="true">↑</span></button></div></article>
+        <article class="personal-story-panel" id="story-guitar" role="region" aria-labelledby="story-trigger-guitar" tabindex="-1" hidden><div class="story-panel-heading"><div><p class="about-label">Guitar & Music / A personal story</p><h3>Finding My Rhythm</h3></div><button class="story-close" type="button" data-close-story>Close story <span aria-hidden="true">×</span></button></div><div class="story-prose"><p>I began learning guitar at around 13, with guidance from my older brother. He helped me get started, and I continued learning independently, exploring both acoustic and electric guitars.</p><p>Practice has taught me that progress often comes from returning to a difficult passage, listening carefully and trying again. Music gives me a creative outlet away from programming, with a different kind of focus.</p><p>Performing at school also gave me a chance to become more comfortable playing in front of people. I value the patience and confidence that come from learning an instrument as much as the songs themselves.</p></div><div class="about-photo-grid "><figure class="about-photo "><button class="about-photo-button" type="button" data-full="images/personal/guitar/guitar3.jpeg" data-gallery="guitar" data-caption="Practising with an electric guitar." aria-label="Enlarge photo: Practising with an electric guitar."><img src="images/personal/guitar/guitar3.jpeg" width="1920" height="2560" alt="Practising with an electric guitar." loading="lazy" decoding="async"><span class="photo-enlarge" aria-hidden="true">↗</span></button><figcaption>Practising with an electric guitar.</figcaption></figure><figure class="about-photo "><button class="about-photo-button" type="button" data-full="images/personal/guitar/guitar1.jpeg" data-gallery="guitar" data-caption="A school performance with electric and acoustic guitars." aria-label="Enlarge photo: A school performance with electric and acoustic guitars."><img src="images/personal/guitar/guitar1.jpeg" width="1206" height="657" alt="A school performance with electric and acoustic guitars." loading="lazy" decoding="async"><span class="photo-enlarge" aria-hidden="true">↗</span></button><figcaption>A school performance with electric and acoustic guitars.</figcaption></figure><figure class="about-photo "><button class="about-photo-button" type="button" data-full="images/personal/guitar/guitar2.jpeg" data-gallery="guitar" data-caption="An electric guitar and practice equipment." aria-label="Enlarge photo: An electric guitar and practice equipment."><img src="images/personal/guitar/guitar2.jpeg" width="1920" height="2560" alt="An electric guitar and practice equipment." loading="lazy" decoding="async"><span class="photo-enlarge" aria-hidden="true">↗</span></button><figcaption>An electric guitar and practice equipment.</figcaption></figure><figure class="about-photo "><button class="about-photo-button" type="button" data-full="images/personal/guitar/guitar4.jpeg" data-gallery="guitar" data-caption="Acoustic guitars kept at home." aria-label="Enlarge photo: Acoustic guitars kept at home."><img src="images/personal/guitar/guitar4.jpeg" width="2448" height="2448" alt="Acoustic guitars kept at home." loading="lazy" decoding="async"><span class="photo-enlarge" aria-hidden="true">↗</span></button><figcaption>Acoustic guitars kept at home.</figcaption></figure><figure class="about-photo "><button class="about-photo-button" type="button" data-full="images/personal/guitar/guitar5.jpeg" data-gallery="guitar" data-caption="Another moment of guitar practice." aria-label="Enlarge photo: Another moment of guitar practice."><img src="images/personal/guitar/guitar5.jpeg" width="1206" height="667" alt="Another moment of guitar practice." loading="lazy" decoding="async"><span class="photo-enlarge" aria-hidden="true">↗</span></button><figcaption>Another moment of guitar practice.</figcaption></figure></div><div class="story-panel-end"><button class="story-close" type="button" data-close-story>Back to the stories <span aria-hidden="true">↑</span></button></div></article>
+        <article class="personal-story-panel" id="story-wira" role="region" aria-labelledby="story-trigger-wira" tabindex="-1" hidden><div class="story-panel-heading"><div><p class="about-label">2004 Proton Wira / A personal story</p><h3>More Than Just a Car</h3></div><button class="story-close" type="button" data-close-story>Close story <span aria-hidden="true">×</span></button></div><div class="story-prose"><p>A 2004 Proton Wira, passed from my father to me. Its story is about family, responsibility and the gradual work of becoming more independent.</p></div><section class="wira-chapter"><div class="chapter-copy"><p class="about-label">Chapter 01</p><h4>The Family Car</h4><p>This 2004 Proton Wira originally belonged to my father. It was part of our everyday life for years, carrying the family to school and work. These photographs are part of that car’s story.</p></div><div class="about-photo-grid "><figure class="about-photo "><button class="about-photo-button" type="button" data-full="images/personal/wira/wira2.jpeg" data-gallery="wira" data-caption="The Wira parked outside, before its later appearance." aria-label="Enlarge photo: The Wira parked outside, before its later appearance."><img src="images/personal/wira/wira2.jpeg" width="1920" height="2560" alt="The Wira parked outside, before its later appearance." loading="lazy" decoding="async"><span class="photo-enlarge" aria-hidden="true">↗</span></button><figcaption>The Wira parked outside, before its later appearance.</figcaption></figure><figure class="about-photo "><button class="about-photo-button" type="button" data-full="images/personal/wira/wira3.jpeg" data-gallery="wira" data-caption="A rear view of the Wira from the same earlier period." aria-label="Enlarge photo: A rear view of the Wira from the same earlier period."><img src="images/personal/wira/wira3.jpeg" width="1920" height="2560" alt="A rear view of the Wira from the same earlier period." loading="lazy" decoding="async"><span class="photo-enlarge" aria-hidden="true">↗</span></button><figcaption>A rear view of the Wira from the same earlier period.</figcaption></figure></div></section><section class="wira-chapter"><div class="chapter-copy"><p class="about-label">Chapter 02</p><h4>Bringing It Back to Life</h4><p>When the Wira was no longer in good condition and was not being used regularly, it was passed down to me. I used money from part-time work to repair and improve it gradually, prioritising mechanical reliability and engine-related problems before its appearance. These photographs show different stages of work on the car, including workshop visits and the interior.</p></div><div class="about-photo-grid "><figure class="about-photo "><button class="about-photo-button" type="button" data-full="images/personal/wira/wira1.jpeg" data-gallery="wira" data-caption="The Wira on a workshop lift." aria-label="Enlarge photo: The Wira on a workshop lift."><img src="images/personal/wira/wira1.jpeg" width="1920" height="2560" alt="The Wira on a workshop lift." loading="lazy" decoding="async"><span class="photo-enlarge" aria-hidden="true">↗</span></button><figcaption>The Wira on a workshop lift.</figcaption></figure><figure class="about-photo "><button class="about-photo-button" type="button" data-full="images/personal/wira/wira4.jpeg" data-gallery="wira" data-caption="Work in progress inside the stripped rear cabin." aria-label="Enlarge photo: Work in progress inside the stripped rear cabin."><img src="images/personal/wira/wira4.jpeg" width="1920" height="2560" alt="Work in progress inside the stripped rear cabin." loading="lazy" decoding="async"><span class="photo-enlarge" aria-hidden="true">↗</span></button><figcaption>Work in progress inside the stripped rear cabin.</figcaption></figure><figure class="about-photo "><button class="about-photo-button" type="button" data-full="images/personal/wira/wira5.jpeg" data-gallery="wira" data-caption="The Wira with its bonnet open and a front wheel removed during work." aria-label="Enlarge photo: The Wira with its bonnet open and a front wheel removed during work."><img src="images/personal/wira/wira5.jpeg" width="1920" height="2560" alt="The Wira with its bonnet open and a front wheel removed during work." loading="lazy" decoding="async"><span class="photo-enlarge" aria-hidden="true">↗</span></button><figcaption>The Wira with its bonnet open and a front wheel removed during work.</figcaption></figure></div></section><section class="wira-chapter"><div class="chapter-copy"><p class="about-label">Chapter 03</p><h4>The Transformation</h4><p>The changes happened a little at a time, as I could afford them. Seeing the Wira take shape taught me to be patient and make practical choices. The result matters to me because of the work and responsibility behind it.</p></div><div class="about-photo-grid "><figure class="about-photo "><button class="about-photo-button" type="button" data-full="images/personal/wira/wira6.jpeg" data-gallery="wira" data-caption="A later rear view of the silver Wira." aria-label="Enlarge photo: A later rear view of the silver Wira."><img src="images/personal/wira/wira6.jpeg" width="1920" height="2560" alt="A later rear view of the silver Wira." loading="lazy" decoding="async"><span class="photo-enlarge" aria-hidden="true">↗</span></button><figcaption>A later rear view of the silver Wira.</figcaption></figure><figure class="about-photo "><button class="about-photo-button" type="button" data-full="images/personal/wira/wira7.jpeg" data-gallery="wira" data-caption="A later front view of the Wira." aria-label="Enlarge photo: A later front view of the Wira."><img src="images/personal/wira/wira7.jpeg" width="1920" height="2560" alt="A later front view of the Wira." loading="lazy" decoding="async"><span class="photo-enlarge" aria-hidden="true">↗</span></button><figcaption>A later front view of the Wira.</figcaption></figure></div></section><section class="wira-chapter"><div class="chapter-copy"><p class="about-label">Chapter 04</p><h4>The Journey Continues</h4><p>Today, the Wira helps me get to college and work. It is a connection to my family, and a reminder that independence is built through small, consistent efforts.</p></div><div class="about-photo-grid "><figure class="about-photo "><button class="about-photo-button" type="button" data-full="images/personal/wira/wira8.jpeg" data-gallery="wira" data-caption="Beside the Wira at night." aria-label="Enlarge photo: Beside the Wira at night."><img src="images/personal/wira/wira8.jpeg" width="1920" height="2560" alt="Beside the Wira at night." loading="lazy" decoding="async"><span class="photo-enlarge" aria-hidden="true">↗</span></button><figcaption>Beside the Wira at night.</figcaption></figure></div></section><blockquote class="wira-quote"><p>“It once carried my father's dreams. Today, it carries mine.”</p><cite>A personal reflection</cite></blockquote><div class="story-panel-end"><button class="story-close" type="button" data-close-story>Back to the stories <span aria-hidden="true">↑</span></button></div></article>
+        <article class="personal-story-panel" id="story-camera" role="region" aria-labelledby="story-trigger-camera" tabindex="-1" hidden><div class="story-panel-heading"><div><p class="about-label">Photography & Filming / A personal story</p><h3>Behind the Lens</h3></div><button class="story-close" type="button" data-close-story>Close story <span aria-hidden="true">×</span></button></div><p class="camera-creator-credit">Filming for Abby | Foodie Bahau</p><div class="story-prose"><p>I help my older sister, Abby, film food-review content, handling the camera while she creates the content and handles the video editing. My part involves framing shots, trying different camera angles, and recording scenes and food.</p><p>It made me look more carefully at ordinary details: where the light falls, what belongs in the frame and how a change of angle affects the scene. Getting a useful shot also meant communicating with my sister about what she needed.</p><p>I enjoyed contributing to the filming process and learning how a sequence of simple observations can become visual storytelling. The editing and ownership of the content remained with my sister.</p></div>
+        <aside class="creator-spotlight" aria-labelledby="creator-spotlight-heading">
+              <p class="about-label">CREATOR SPOTLIGHT</p>
+              <h4 id="creator-spotlight-heading">Abby | Foodie Bahau</h4>
+              <p class="creator-spotlight-description">Food reviews, local discoveries and the creator I help with filming.</p>
+              <figure class="about-photo creator-spotlight-photo">
+                <button class="about-photo-button" type="button" data-full="images/personal/cameraman/abby.png" data-caption="Abby | Foodie Bahau — TikTok profile." aria-label="Enlarge Abby | Foodie Bahau's TikTok profile screenshot">
+                  <img src="images/personal/cameraman/abby.png" width="1633" height="971" alt="TikTok profile screenshot for Abby | Foodie Bahau." loading="lazy" decoding="async">
+                  <span class="photo-enlarge" aria-hidden="true">↗</span>
+                </button>
+                <figcaption>Abby | Foodie Bahau — TikTok profile.</figcaption>
+              </figure>
+              <a class="creator-spotlight-link" href="https://www.tiktok.com/@abbyfoodiee?_r=1&amp;_t=ZS-9AqaGLuRXMe" target="_blank" rel="noopener noreferrer">Visit Abby's TikTok <span class="sr-only">(opens in a new tab)</span><span aria-hidden="true">↗</span></a>
+            </aside>
+        <div class="about-photo-grid ">
+          <figure class="about-photo "><button class="about-photo-button" type="button" data-full="images/personal/cameraman/camera2.jpeg" data-gallery="camera" data-caption="At a restaurant while helping with food-review filming." aria-label="Enlarge photo: At a restaurant while helping with food-review filming."><img src="images/personal/cameraman/camera2.jpeg" width="2560" height="1920" alt="At a restaurant while helping with food-review filming." loading="lazy" decoding="async"><span class="photo-enlarge" aria-hidden="true">↗</span></button><figcaption>At a restaurant while helping with food-review filming.</figcaption></figure>
+          <figure class="about-photo "><button class="about-photo-button" type="button" data-full="images/personal/cameraman/camera1.jpeg" data-gallery="camera" data-caption="Setting up a phone for filming." aria-label="Enlarge photo: Setting up a phone for filming."><img src="images/personal/cameraman/camera1.jpeg" width="1920" height="2560" alt="Setting up a phone for filming." loading="lazy" decoding="async"><span class="photo-enlarge" aria-hidden="true">↗</span></button><figcaption>Setting up a phone for filming.</figcaption></figure>
+          <figure class="about-photo "><button class="about-photo-button" type="button" data-full="images/personal/cameraman/camera3.jpeg" data-gallery="camera" data-caption="A photograph during a food-review outing." aria-label="Enlarge photo: A photograph during a food-review outing."><img src="images/personal/cameraman/camera3.jpeg" width="2560" height="1920" alt="A photograph during a food-review outing." loading="lazy" decoding="async"><span class="photo-enlarge" aria-hidden="true">↗</span></button><figcaption>A photograph during a food-review outing.</figcaption></figure>
+          <figure class="about-photo "><button class="about-photo-button" type="button" data-full="images/personal/cameraman/camera4.jpeg" data-gallery="camera" data-caption="A phone held on a filming grip." aria-label="Enlarge photo: A phone held on a filming grip."><img src="images/personal/cameraman/camera4.jpeg" width="1920" height="2560" alt="A phone held on a filming grip." loading="lazy" decoding="async"><span class="photo-enlarge" aria-hidden="true">↗</span></button><figcaption>A phone held on a filming grip.</figcaption></figure>
+        </div><div class="story-panel-end"><button class="story-close" type="button" data-close-story>Back to the stories <span aria-hidden="true">↑</span></button></div></article>
       </div>
+      <noscript><p class="story-noscript">Enable JavaScript to expand these personal stories and use the photo viewer. The college and work journals above can still be expanded.</p></noscript>
+    </div></section>
 
-      <div class="moments-grid">
-        <!-- Moment 1: Classmates Cohort (Wide Card) -->
-        <div class="moment-card span-full gallery-item" 
-             data-full="images/ferry/classmates.jpeg" 
-             data-caption="Computer Science classmates and batch cohort gathered in front of Kolej Profesional MARA Beranang landmark holding certificates.">
-          <div class="moment-img-wrap">
-            <img src="images/ferry/classmates.jpeg" 
-                 alt="Ferry with Computer Science classmates at Kolej Profesional MARA Beranang" 
-                 loading="lazy">
-            <div class="thumb-overlay">
-              <span>Click to view cohort photo ↗</span>
-            </div>
-          </div>
-          <div class="moment-body">
-            <span class="moment-tag">CAMPUS COHORT · KPM BERANANG</span>
-            <h3 class="moment-title">Computer Science Classmates & Peer Collaboration</h3>
-            <p class="moment-desc">
-              Strong teamwork and shared learning with fellow Computer Science peers at KPMB—collaborating across labs, academic milestones, and coding challenges.
-            </p>
-          </div>
-        </div>
-
-        <!-- Moment 2: Doing Assignment / In The Zone -->
-        <div class="moment-card gallery-item" id="assignments"
-             data-full="images/ferry/library.jpeg" 
-             data-caption="Deep focus mode working on software engineering assignments and project architecture in the campus study area.">
-          <div class="moment-img-wrap">
-            <img src="images/ferry/library.jpeg" 
-                 alt="Ferry working on assignments with laptop and headphones" 
-                 loading="lazy">
-            <div class="thumb-overlay">
-              <span>Click to view photo ↗</span>
-            </div>
-          </div>
-          <div class="moment-body">
-            <span class="moment-tag">FOCUS MODE · CODING</span>
-            <h3 class="moment-title">Hands-on Assignment Development</h3>
-            <p class="moment-desc">
-              In the zone building software assignments, testing modules, and refining architectural logic with discipline.
-            </p>
-          </div>
-        </div>
-
-        <!-- Moment 3: Development Setup & Mobile Testing -->
-        <div class="moment-card gallery-item" 
-             data-full="images/ferry/project.jpeg" 
-             data-caption="Development rig running Flutter, Android Studio, and live-device hot reloading for FitTrack V2 workout planner app.">
-          <div class="moment-img-wrap">
-            <img src="images/ferry/project.jpeg" 
-                 alt="Development rig showing Flutter code and Android device test" 
-                 loading="lazy">
-            <div class="thumb-overlay">
-              <span>Click to view setup ↗</span>
-            </div>
-          </div>
-          <div class="moment-body">
-            <span class="moment-tag">DEV RIG · FLUTTER & DART</span>
-            <h3 class="moment-title">Live Device Mobile Testing</h3>
-            <p class="moment-desc">
-              Cross-platform mobile engineering with Android Studio, Flutter framework, and real-time physical device debugging.
-            </p>
-          </div>
-        </div>
-
-        <!-- Moment 4: Stage Presentation / Speaking (Portrait Format) -->
-        <div class="presentation-portrait-card gallery-item" 
-             data-full="images/ferry/present.jpeg" 
-             data-caption="Ferry delivering a presentation on stage at Kolej Profesional MARA Beranang, sharing insights and technical ideas with the audience.">
-          <div class="presentation-portrait-img-wrap">
-            <img src="images/ferry/present.jpeg" 
-                 alt="Ferry on stage delivering a speech and presentation (Portrait)" 
-                 loading="lazy">
-            <div class="thumb-overlay">
-              <span>Click to view portrait photo ↗</span>
-            </div>
-          </div>
-          <div class="presentation-portrait-body">
-            <span class="moment-tag">PUBLIC SPEAKING & PRESENTATION</span>
-            <h3 class="moment-title">Stage Presentation & Technical Communication</h3>
-            <p class="moment-desc">
-              Confident public communication—pitching ideas, delivering project walkthroughs, and articulating complex technical solutions with clarity before lecturers and peers at KPM Beranang.
-            </p>
-            <div class="presentation-skills-pills">
-              <span class="tech-tag">Stage Presentation</span>
-              <span class="tech-tag">Technical Walkthrough</span>
-              <span class="tech-tag">Public Speaking</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ========================================================================= -->
-    <!-- 05: DEVELOPER PROFILE & FAST DOSSIER -->
-    <!-- ========================================================================= -->
-    <section class="section" id="profile">
-      <div class="section-header-block">
-        <p class="eyebrow">DEVELOPER DOSSIER</p>
-        <h2>Professional Snapshot</h2>
-        <p class="section-subtitle">
-          Clean specs and core capabilities for prospective employers and internship teams.
-        </p>
-      </div>
-
-      <div class="profile-dossier-grid">
-        <!-- Left: Portrait Photo Card -->
-        <div class="profile-portrait-card gallery-item" 
-             data-full="images/ferry/ferry_mirror.jpeg" 
-             data-caption="Ferry Irwan Shah Azman - Diploma in Computer Science student at KPM Beranang.">
-          <div class="profile-portrait-wrap">
-            <img src="images/ferry/ferry_mirror.jpeg" 
-                 alt="Ferry Irwan Shah Azman formal portrait" 
-                 loading="lazy">
-            <div class="thumb-overlay">
-              <span>Click to enlarge portrait ↗</span>
-            </div>
-          </div>
-          <div class="profile-portrait-footer">
-            <div class="profile-portrait-name">Ferry Irwan Shah Azman</div>
-            <div class="profile-portrait-role">// Computer Science Student & Developer</div>
-          </div>
-        </div>
-
-        <!-- Right: Fast Specs & Action Links -->
-        <div class="profile-dossier-content">
-          <div>
-            <p class="card-top-tag">QUICK SUMMARY</p>
-            <h3 style="font-family: var(--font-heading); font-size: 1.5rem; color: #fff; margin-bottom: 12px;">
-              Ready to Contribute From Day One
-            </h3>
-            <p style="color: var(--text-dim); font-size: 0.95rem; line-height: 1.65;">
-              Equipped with rigorous computer science coursework, proven semester excellence (Award recipient), and hands-on project experience in mobile apps, full-stack web platforms, and distributed systems.
-            </p>
-
-            <div class="dossier-spec-table">
-              <div class="dossier-spec-row">
-                <span class="dossier-spec-lbl">Program</span>
-                <span class="dossier-spec-val">Diploma in Computer Science</span>
-              </div>
-              <div class="dossier-spec-row">
-                <span class="dossier-spec-lbl">Institution</span>
-                <span class="dossier-spec-val">Kolej Profesional MARA Beranang</span>
-              </div>
-              <div class="dossier-spec-row">
-                <span class="dossier-spec-lbl">Internship Availability</span>
-                <span class="dossier-spec-val" style="color: var(--lime);">Starts 7 December 2026 (Seeking)</span>
-              </div>
-              <div class="dossier-spec-row">
-                <span class="dossier-spec-lbl">Campus Leadership</span>
-                <span class="dossier-spec-val" style="color: var(--cyan);">Head of Program (CSR) · Program Bureau (OC)</span>
-              </div>
-              <div class="dossier-spec-row">
-                <span class="dossier-spec-lbl">Primary Tech Stack</span>
-                <span class="dossier-spec-val">Flutter · Laravel · MySQL · Redis</span>
-              </div>
-              <div class="dossier-spec-row">
-                <span class="dossier-spec-lbl">Recognition</span>
-                <span class="dossier-spec-val" style="color: #fbbf24;">College Outstanding Performance Award</span>
-              </div>
-            </div>
-
-            <div class="dossier-pills-wrap">
-              <span class="tech-tag">Clean Architecture</span>
-              <span class="tech-tag">RESTful APIs</span>
-              <span class="tech-tag">Git Version Control</span>
-              <span class="tech-tag" style="border-color: rgba(52, 211, 153, 0.4); color: #34d399;">CSR Leader</span>
-              <span class="tech-tag" style="border-color: rgba(56, 189, 248, 0.4); color: #38bdf8;">Orientation Facilitator</span>
-              <span class="tech-tag">Team Collaboration</span>
-            </div>
-          </div>
-
-          <div style="display: flex; gap: 14px; flex-wrap: wrap; margin-top: 28px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.08);">
-            <a href="projects.html" class="btn primary">View Featured Projects (19 SS) ↗</a>
-            <a href="https://www.linkedin.com/in/ferry-irwan-shah-azman-889b25428/" target="_blank" rel="noopener noreferrer" class="btn secondary">Connect on LinkedIn ↗</a>
-            <a href="https://github.com/ferryyirwan" target="_blank" rel="noopener noreferrer" class="btn btn-terminal">GitHub Profile ↗</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Bottom Footer CTA -->
-    <section class="section showcase-footer-cta">
-      <div class="cta-inner">
-        <p class="eyebrow">EXPLORE MORE</p>
-        <h2>Looking for Case Studies & Code?</h2>
-        <p>
-          Discover 4 in-depth project breakdowns with full architecture details and 19 application screenshots.
-        </p>
-        <div class="contact-links">
-          <a href="projects.html" class="btn primary">
-            Explore All 4 Projects ↗
-          </a>
-          <a href="index.html#contact" class="btn secondary">
-            Get in Touch
-          </a>
-          <a href="index.html" class="btn secondary">
-            ← Return to Home
-          </a>
-        </div>
-      </div>
-    </section>
+    <section class="about-container about-section continue-exploring" aria-labelledby="continue-heading"><div><p class="about-label">06 / What’s next</p><h2 id="continue-heading">Continue Exploring.</h2><p>Take a look at what I've been building, or get in touch to start a conversation.</p></div><div class="about-cta-links"><a class="btn primary" href="projects.html">View Projects <span aria-hidden="true">↗</span></a><a class="btn secondary" href="/assets/resume/FERRY%20RESUME.pdf" target="_blank" rel="noopener noreferrer">View Resume <span class="sr-only">(PDF, opens in a new tab)</span><span aria-hidden="true">↗</span></a><a class="about-text-link" href="/#contact">Get in Touch <span aria-hidden="true">↗</span></a></div></section>
   </main>
 
-  <!-- Interactive Lightbox Modal -->
-  <div id="image-lightbox" class="lightbox-modal" role="dialog" aria-hidden="true" aria-label="Image Preview">
+
+  <div id="image-lightbox" class="lightbox-modal" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Photo viewer" aria-describedby="lightbox-caption">
     <div class="lightbox-backdrop"></div>
     <div class="lightbox-content">
-      <button class="lightbox-back-btn" aria-label="Go back to portfolio">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <line x1="19" y1="12" x2="5" y2="12"></line>
-          <polyline points="12 19 5 12 12 5"></polyline>
-        </svg>
-        <span>Back</span>
-      </button>
-      <button class="lightbox-close" aria-label="Close modal">&times;</button>
-      <div class="lightbox-image-wrap">
-        <img id="lightbox-img" src="" alt="Photo preview">
-      </div>
+      <button class="lightbox-back-btn" type="button" aria-label="Close photo viewer and return to About"><span aria-hidden="true">←</span> Back</button>
+      <button class="lightbox-close" type="button" aria-label="Close photo viewer">&times;</button>
+      <div class="lightbox-image-wrap"><img id="lightbox-img" alt="Photo preview"></div>
       <p id="lightbox-caption" class="lightbox-caption"></p>
-      <button class="lightbox-bottom-back" aria-label="Back to page">
-        <span>← Back to page</span>
-      </button>
+      <button class="lightbox-bottom-back" type="button">Back to page</button>
     </div>
   </div>
 
-  <footer>
-    <p>© <span id="year"></span> Ferry Irwan Shah Azman. Built with HTML, CSS & JavaScript · Hosted on GitHub</p>
+  <footer class="site-footer">
+    <svg class="social-icon-sprite" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><symbol id="social-github" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.09-.745.083-.729.083-.729 1.205.084 1.84 1.237 1.84 1.237 1.07 1.835 2.807 1.305 3.492.998.108-.776.418-1.305.762-1.605-2.665-.303-5.467-1.332-5.467-5.93 0-1.31.47-2.381 1.235-3.221-.124-.303-.535-1.523.117-3.176 0 0 1.008-.322 3.3 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.046.138 3.006.404 2.289-1.552 3.294-1.23 3.294-1.23.655 1.653.244 2.873.12 3.176.77.84 1.232 1.911 1.232 3.221 0 4.61-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .322.216.694.825.576C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></symbol><symbol id="social-linkedin" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.35V9h3.414v1.561h.049c.476-.9 1.637-1.85 3.37-1.85 3.601 0 4.27 2.37 4.27 5.455v6.286zM5.337 7.433a2.062 2.062 0 1 1 0-4.124 2.062 2.062 0 0 1 0 4.124zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729V22.27C0 23.226.792 24 1.771 24h20.451C23.2 24 24 23.226 24 22.27V1.729C24 .774 23.2 0 22.222 0z"/></symbol><symbol id="social-instagram" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5.2" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="18.2" cy="5.8" r="1" fill="currentColor"/></symbol></svg>
+    <div class="site-footer-inner"><div><a class="site-footer-brand" href="/">Ferry Irwan.</a><p>&copy; <span id="year"></span> · Designed & Built by Ferry</p><div class="site-footer-socials" role="group" aria-label="Social profiles"><a class="social-icon-link" href="https://github.com/ferryyirwan" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><svg aria-hidden="true" focusable="false"><use href="#social-github"></use></svg></a><a class="social-icon-link" href="https://www.linkedin.com/in/ferry-irwan-shah-azman-889b25428/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg aria-hidden="true" focusable="false"><use href="#social-linkedin"></use></svg></a><a class="social-icon-link" href="https://www.instagram.com/frywnsh?psln=MW9sdXI3djBjdHd5ZA%3D%3D&amp;utm_source=qr" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg aria-hidden="true" focusable="false" class="social-icon-instagram"><use href="#social-instagram"></use></svg></a></div></div><nav aria-label="Footer navigation"><a href="/">Home</a><a href="/about.html">About</a><a href="/projects/">Projects</a><a href="/resume/">Resume</a><a href="/#contact">Contact</a></nav></div>
   </footer>
 </body>
 </html>
