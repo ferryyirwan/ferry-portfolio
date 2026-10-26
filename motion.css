@@ -1,0 +1,77 @@
+/* Homepage pilot only. Content is visible unless a finite animation is running. */
+.home-page {
+  --motion-reveal-duration: 560ms;
+  --motion-image-duration: 620ms;
+  --motion-hover-duration: 280ms;
+  --motion-ease-out: cubic-bezier(.22, 1, .36, 1);
+  --motion-reveal-distance: 14px;
+}
+
+/* Focus feedback reuses the hero's existing hover colors and focus outline. */
+.home-page .home-actions .primary:focus-visible { background: #DDE7E6; border-color: #DDE7E6; }
+.home-page .home-actions .secondary:focus-visible { background: #293638; border-color: #AFC5CC; }
+.home-page .selected-project-visual:focus-visible { border-color: var(--color-steel); }
+
+@media (prefers-reduced-motion: no-preference) {
+  /* Four short beats; text never starts completely transparent. */
+  .home-page.home-motion-ready .hero-portrait {
+    animation: home-hero-enter 620ms var(--motion-ease-out) both;
+  }
+  .home-page.home-motion-ready .hero-introduction h1 {
+    animation: home-hero-enter 560ms var(--motion-ease-out) 70ms both;
+  }
+  .home-page.home-motion-ready .hero-introduction > :is(.hero-kicker, .hero-education, .hero-summary) {
+    animation: home-hero-enter 560ms var(--motion-ease-out) 140ms both;
+  }
+  .home-page.home-motion-ready :is(.home-actions, .hero-socials) {
+    animation: home-hero-enter 560ms var(--motion-ease-out) 210ms both;
+  }
+  .home-page.home-motion-ready .hero-wireframe {
+    animation: home-wireframe-settle 1100ms var(--motion-ease-out) both;
+  }
+  /* Applied only as the observer fires; there is no persistent hidden state. */
+  .home-page .motion-reveal {
+    animation: home-section-enter var(--motion-item-duration, var(--motion-reveal-duration))
+      var(--motion-ease-out) var(--motion-item-delay, 0ms) both;
+  }
+  .home-page :is(.building-visual, .personal-collage figure) { --motion-item-duration: var(--motion-image-duration); }
+  .home-page .motion-reveal:focus-within { animation: none; }
+
+  @keyframes home-hero-enter {
+    from { opacity: .55; transform: translate3d(0, 10px, 0); }
+    to { opacity: 1; transform: none; }
+  }
+  @keyframes home-section-enter {
+    from { opacity: 0; transform: translate3d(0, var(--motion-reveal-distance), 0); }
+    to { opacity: 1; transform: none; }
+  }
+  @keyframes home-wireframe-settle {
+    from { transform: translate3d(0, 6px, 0) rotate(11deg); }
+    to { transform: rotate(12deg); }
+  }
+
+  /* Fine-pointer devices only; keep screenshots inside their existing padding. */
+  @media (hover: hover) and (pointer: fine) {
+    .home-page .selected-project-visual {
+      transition: transform var(--motion-hover-duration) var(--motion-ease-out),
+        border-color var(--ease), box-shadow var(--ease);
+    }
+    .home-page .selected-project-visual img {
+      transition: transform var(--motion-hover-duration) var(--motion-ease-out);
+    }
+    .home-page .selected-project-visual:hover { transform: translateY(-2px); }
+    .home-page .selected-project-visual:hover img { transform: scale(1.01); }
+    .home-page :is(.home-actions .btn, .hero-socials a, .contact-email, .contact-profile-links a) > span[aria-hidden] {
+      display: inline-block;
+      transition: transform var(--motion-hover-duration) var(--motion-ease-out);
+    }
+    .home-page :is(.home-actions .btn, .hero-socials a, .contact-email, .contact-profile-links a):hover > span[aria-hidden] {
+      transform: translate(2px, -2px);
+    }
+    .home-page .btn:active { transform: none; }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-page .btn:hover { transform: none; }
+}

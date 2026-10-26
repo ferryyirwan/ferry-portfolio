@@ -1,615 +1,74 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="project-document">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Featured Projects & Case Studies - Ferry Irwan | Software Developer Portfolio">
-  <title>Featured Projects | Ferry Irwan</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
+  <meta name="description" content="Five individually developed web, mobile, real-time and desktop projects by Ferry Irwan Shah Azman.">
+  <meta name="theme-color" content="#121516">
+  <title>Selected Work | Ferry Irwan</title>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/foundation.css">
+  <link rel="stylesheet" href="/projects-v2.css">
+
+  <script src="/script.js" defer></script>
+
+  <!-- Keep the overview markup in projects.html and projects/index.html in sync. Both entries work without JavaScript. -->
+  <link rel="canonical" href="/projects/">
+  <script src="/projects-legacy.js" defer></script>
+  <script src="/projects-motion.js" defer></script>
 </head>
-<body class="projects-page">
-  <!-- Navigation -->
-  <header class="navbar">
+<body class="projects-v2 projects-overview-page">
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="navbar site-header">
     <div class="nav-container">
-      <a class="logo" href="index.html"><span class="code-bracket">&lt;</span>FERRY<span>.DEV</span><span class="code-bracket"> /&gt;</span></a>
-
+      <a class="logo site-brand" href="/" aria-label="Ferry Irwan — Home">Ferry Irwan<span aria-hidden="true">.</span></a>
       <div class="nav-right">
-        <nav aria-label="Main navigation">
-          <a href="index.html">Home</a>
-          <a href="about.html">About</a>
-          <a href="index.html#skills">Tech Stack</a>
-          <a href="projects.html" class="nav-projects-link active">Projects <span class="nav-count-pill">19 SS</span></a>
-          <a href="index.html#contact">Contact</a>
+        <nav id="main-navigation" aria-label="Main navigation">
+          <a href="/">Home</a>
+          <a href="/about.html">About</a>
+          <a href="/projects/" class="active" aria-current="page">Projects</a>
+          <a href="/resume/">Resume</a>
+          <a href="/#contact">Contact</a>
         </nav>
-
-        <div class="nav-social-divider" aria-hidden="true"></div>
-
-        <div class="nav-socials">
-          <a href="https://github.com/ferryyirwan" target="_blank" rel="noopener noreferrer" class="nav-social-btn nav-social-github" title="GitHub Profile (@ferryyirwan)" aria-label="GitHub Profile">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
-            </svg>
-          </a>
-          <a href="https://www.linkedin.com/in/ferry-irwan-shah-azman-889b25428/" target="_blank" rel="noopener noreferrer" class="nav-social-btn nav-social-linkedin" title="LinkedIn Profile (Ferry Irwan Shah Azman)" aria-label="LinkedIn Profile">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-              <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76a1.69 1.69 0 0 0 1.69-1.69 1.69 1.69 0 0 0-1.69-1.68 1.69 1.69 0 0 0-1.69 1.68 1.69 1.69 0 0 0 1.69 1.69m1.4 9.74v-8.37H5.06v8.37h2.8z"/>
-            </svg>
-          </a>
-        </div>
-
-        <!-- Mobile Navigation Toggle Button -->
-        <button class="nav-toggle-btn" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
-          <span class="nav-toggle-icon"></span>
-        </button>
+        <button class="nav-toggle-btn" id="nav-toggle" type="button" aria-controls="main-navigation" aria-label="Toggle navigation menu" aria-expanded="false"><span class="nav-toggle-icon"></span></button>
       </div>
     </div>
   </header>
-
-  <main>
-    <!-- Page Header / Hero -->
-    <section class="projects-hero" id="projects-showcase">
-      <div class="projects-hero-content">
-        <a href="index.html" class="back-link">← Back to Overview</a>
-        <p class="eyebrow">PORTFOLIO SHOWCASE & CASE STUDIES</p>
-        <h1>Featured <span>Projects</span></h1>
-        <p class="intro">
-          Explore in-depth documentation, system architecture, key features, and complete UI screenshots for the software solutions I've engineered across Mobile, Web, Distributed Backend, and Desktop platforms.
-        </p>
-
-        <!-- Quick Jump Navigation -->
-        <div class="quick-nav">
-          <span class="quick-nav-label">Jump to:</span>
-          <div class="quick-nav-pills">
-            <a href="#fittrack" class="pill-btn">01 FitTrack V2</a>
-            <a href="#indigenous" class="pill-btn">02 Indigenous Marketplace</a>
-            <a href="#nexatech" class="pill-btn">03 NexaTech Notification</a>
-            <a href="#weather" class="pill-btn">04 Weather Analytics</a>
-          </div>
-        </div>
-      </div>
+  <main id="main-content" tabindex="-1">
+    <section class="project-container project-index-intro" aria-labelledby="projects-heading">
+      <p class="project-label">Portfolio / Selected projects</p>
+      <div class="project-intro-grid"><h1 id="projects-heading">Selected Work<span>.</span></h1><p>Five projects I developed individually throughout my studies. Each explores a different part of software development, from web and mobile applications to real-time systems and desktop tools.</p></div>
+      <div class="project-index-note"><span>01—05 / Individual projects</span><span>Web · Mobile · Real-time · Desktop</span></div>
     </section>
-
-    <div class="showcase-container">
-
-      <!-- ========================================================================= -->
-      <!-- PROJECT 01: FitTrack V2 -->
-      <!-- ========================================================================= -->
-      <article class="project-detail-section" id="fittrack">
-        <div class="project-header">
-          <div class="project-meta">
-            <span class="badge">01 / MOBILE APPLICATION</span>
-            <span class="tag-status">Academic Project</span>
-          </div>
-          <h2>FitTrack V2 – Workout Planner Mobile App</h2>
-          <p class="project-lead">
-            A comprehensive workout planner and fitness tracking application developed with Flutter and Dart, engineered to deliver smooth cross-platform workout planning, interactive timers, BMI calculations, and personalized routine management.
-          </p>
-
-          <div class="project-tags">
-            <span>Flutter</span>
-            <span>Dart</span>
-            <span>Android / iOS</span>
-            <span>Mobile UI/UX</span>
-            <span>State Management</span>
-            <span>Material Design</span>
-          </div>
-
-          <div class="project-cta-group">
-            <a href="https://github.com/ferryyirwan/fittrack-v2" target="_blank" rel="noopener noreferrer" class="btn primary">
-              View on GitHub ↗
-            </a>
-            <a href="#fittrack-gallery" class="btn secondary">
-              View Screenshots (8) ↓
-            </a>
-          </div>
-        </div>
-
-        <!-- Project Highlights Grid -->
-        <div class="project-specs-grid">
-          <div class="spec-card">
-            <h3>🎯 Project Objective</h3>
-            <p>
-              Developed as an academic mobile computing project at Kolej Profesional MARA Beranang to empower users with an intuitive tool for structuring workouts, tracking fitness metrics, and maintaining consistent exercise routines.
-            </p>
-          </div>
-          <div class="spec-card">
-            <h3>🏋️ Workout Management</h3>
-            <p>
-              Provides categorized exercise directories with step-by-step instructional guides, target muscle breakdown, and difficulty indicators to help users perform exercises safely and effectively.
-            </p>
-          </div>
-          <div class="spec-card">
-            <h3>⚖️ BMI & Fitness Tools</h3>
-            <p>
-              Integrated Body Mass Index (BMI) calculator with dynamic metric inputs and visual status classifications, alongside an interactive workout countdown stopwatch timer for interval sessions.
-            </p>
-          </div>
-          <div class="spec-card">
-            <h3>👤 Personalization & Scheduling</h3>
-            <p>
-              Features dedicated weekly workout calendar scheduling, favorites bookmarking, and personal profile management to track fitness milestones over time.
-            </p>
-          </div>
-        </div>
-
-        <!-- Screenshots Gallery -->
-        <div class="gallery-wrapper" id="fittrack-gallery">
-          <div class="gallery-header">
-            <div>
-              <p class="eyebrow">APPLICATION SCREENSHOTS</p>
-              <h3>FitTrack V2 Mobile Interface</h3>
-            </div>
-            <span class="gallery-counter">8 Screenshots · Click any image to enlarge</span>
-          </div>
-
-          <div class="mobile-screenshot-grid">
-            <div class="screenshot-item mobile-item" data-full="images/fittrack_V2/splash_screen.png" data-caption="FitTrack V2 - Splash Screen & Branding">
-              <div class="screenshot-thumb">
-                <img src="images/fittrack_V2/splash_screen.png" alt="FitTrack V2 Splash Screen" loading="lazy">
-                <div class="thumb-overlay"><span>🔍 Click to Enlarge</span></div>
-              </div>
-              <p class="screenshot-caption">01. Splash Screen</p>
-            </div>
-
-            <div class="screenshot-item mobile-item" data-full="images/fittrack_V2/home1.png" data-caption="FitTrack V2 - Home Dashboard & Workout Categories">
-              <div class="screenshot-thumb">
-                <img src="images/fittrack_V2/home1.png" alt="FitTrack V2 Home Screen" loading="lazy">
-                <div class="thumb-overlay"><span>🔍 Click to Enlarge</span></div>
-              </div>
-              <p class="screenshot-caption">02. Home Dashboard</p>
-            </div>
-
-            <div class="screenshot-item mobile-item" data-full="images/fittrack_V2/exercise.png" data-caption="FitTrack V2 - Exercise Directory & Categories">
-              <div class="screenshot-thumb">
-                <img src="images/fittrack_V2/exercise.png" alt="FitTrack V2 Exercise List" loading="lazy">
-                <div class="thumb-overlay"><span>🔍 Click to Enlarge</span></div>
-              </div>
-              <p class="screenshot-caption">03. Exercise List</p>
-            </div>
-
-            <div class="screenshot-item mobile-item" data-full="images/fittrack_V2/exercise_detail1.png" data-caption="FitTrack V2 - Exercise Step-by-Step Instructions & Animation">
-              <div class="screenshot-thumb">
-                <img src="images/fittrack_V2/exercise_detail1.png" alt="FitTrack V2 Exercise Detail" loading="lazy">
-                <div class="thumb-overlay"><span>🔍 Click to Enlarge</span></div>
-              </div>
-              <p class="screenshot-caption">04. Exercise Detail</p>
-            </div>
-
-            <div class="screenshot-item mobile-item" data-full="images/fittrack_V2/bmi.png" data-caption="FitTrack V2 - BMI Calculator & Rating Status">
-              <div class="screenshot-thumb">
-                <img src="images/fittrack_V2/bmi.png" alt="FitTrack V2 BMI Calculator" loading="lazy">
-                <div class="thumb-overlay"><span>🔍 Click to Enlarge</span></div>
-              </div>
-              <p class="screenshot-caption">05. BMI Calculator</p>
-            </div>
-
-            <div class="screenshot-item mobile-item" data-full="images/fittrack_V2/timer.png" data-caption="FitTrack V2 - Interactive Interval Workout Timer">
-              <div class="screenshot-thumb">
-                <img src="images/fittrack_V2/timer.png" alt="FitTrack V2 Workout Timer" loading="lazy">
-                <div class="thumb-overlay"><span>🔍 Click to Enlarge</span></div>
-              </div>
-              <p class="screenshot-caption">06. Workout Timer</p>
-            </div>
-
-            <div class="screenshot-item mobile-item" data-full="images/fittrack_V2/schedule.png" data-caption="FitTrack V2 - Workout Schedule & Routine Calendar">
-              <div class="screenshot-thumb">
-                <img src="images/fittrack_V2/schedule.png" alt="FitTrack V2 Schedule Planner" loading="lazy">
-                <div class="thumb-overlay"><span>🔍 Click to Enlarge</span></div>
-              </div>
-              <p class="screenshot-caption">07. Workout Schedule</p>
-            </div>
-
-            <div class="screenshot-item mobile-item" data-full="images/fittrack_V2/profile1.png" data-caption="FitTrack V2 - User Profile & Progress Metrics">
-              <div class="screenshot-thumb">
-                <img src="images/fittrack_V2/profile1.png" alt="FitTrack V2 User Profile" loading="lazy">
-                <div class="thumb-overlay"><span>🔍 Click to Enlarge</span></div>
-              </div>
-              <p class="screenshot-caption">08. User Profile</p>
-            </div>
-          </div>
-        </div>
+    <section class="project-feature" aria-labelledby="odds-heading"><div class="project-container">
+      <div class="project-feature-top"><p class="project-label">01 / Individual Final Year Project</p><span class="project-status">In Development</span></div>
+      <div class="project-feature-heading"><div><p class="project-kicker">Currently building</p><h2 id="odds-heading">ODDS<span class="project-feature-name">On-Demand Delivery Management System</span></h2></div><div><p>A delivery management platform bringing Customer, Driver and Admin workflows into one application. My ongoing final year project explores the connection between delivery requests, driver availability and administrative reviews.</p><p class="project-stack">Laravel · PHP · MySQL</p><a class="project-cta" href="/projects/odds/">Explore Case Study <span aria-hidden="true">↗</span></a></div></div>
+      <a class="project-preview project-feature-preview" href="/projects/odds/" aria-label="Explore the ODDS case study"><img src="/images/odds/odds1.png" width="1895" height="963" alt="ODDS landing page introducing Customer, Driver and Admin workspaces." fetchpriority="high" decoding="async"><span class="project-preview-note">Customer / Driver / Admin <span aria-hidden="true">↗</span></span></a>
+    </div></section>
+    <div class="project-container project-index-list">
+      <article class="project-index-entry" aria-labelledby="marketplace-heading">
+        <a class="project-preview" href="/projects/marketplace/" aria-label="Explore the Indigenous Community Marketplace case study"><img src="/images/indigenous/homepage.png" width="1901" height="973" alt="The project’s introductory page, shown with its original Turtle Conservation branding." loading="lazy" decoding="async"><span class="project-preview-note">Marketplace homepage <span aria-hidden="true">↗</span></span></a>
+        <div class="project-entry-copy"><p class="project-label">02 / Full-Stack Web Application</p><h2 id="marketplace-heading">Indigenous Community Marketplace</h2><p>A study project connecting a product catalogue with the practical tools a seller needs to organise listings.</p><p class="project-contribution">Individual Developer</p><p class="project-stack">Laravel · PHP · MySQL · HTML · CSS</p><a class="project-cta" href="/projects/marketplace/">Explore Case Study <span aria-hidden="true">↗</span></a></div>
       </article>
-
-
-      <!-- ========================================================================= -->
-      <!-- PROJECT 02: Indigenous Community Marketplace -->
-      <!-- ========================================================================= -->
-      <article class="project-detail-section" id="indigenous">
-        <div class="project-header">
-          <div class="project-meta">
-            <span class="badge">02 / FULL-STACK WEB DEVELOPMENT</span>
-            <span class="tag-status">E-Commerce & Social Impact</span>
-          </div>
-          <h2>Indigenous Community Marketplace</h2>
-          <p class="project-lead">
-            A web-based e-commerce marketplace platform developed using Laravel, PHP, and MySQL. Built to support local and indigenous artisans by facilitating the sale of eco-friendly and turtle-themed handicrafts in direct collaboration with the Turtle Conservation Society of Malaysia (TCS).
-          </p>
-
-          <div class="project-tags">
-            <span>Laravel</span>
-            <span>PHP</span>
-            <span>MySQL</span>
-            <span>Blade Templates</span>
-            <span>JavaScript</span>
-            <span>MVC Architecture</span>
-            <span>Bootstrap / CSS</span>
-          </div>
-
-          <div class="project-cta-group">
-            <a href="https://github.com/ferryyirwan/indigenous-community-marketplace" target="_blank" rel="noopener noreferrer" class="btn primary">
-              View on GitHub ↗
-            </a>
-            <a href="#indigenous-gallery" class="btn secondary">
-              View Screenshots (5) ↓
-            </a>
-          </div>
-        </div>
-
-        <!-- Project Highlights Grid -->
-        <div class="project-specs-grid">
-          <div class="spec-card">
-            <h3>🌐 Multi-Role Access Control</h3>
-            <p>
-              Implements distinct roles and security gates for Public Visitors (browsing catalog, learning conservation goals), Registered Buyers (purchasing, receipts), and Sellers (store management).
-            </p>
-          </div>
-          <div class="spec-card">
-            <h3>📦 Seller Inventory CRUD</h3>
-            <p>
-              Dedicated Seller Dashboard enabling complete product lifecycle management: adding items, uploading product photography, editing prices/stock, and removing obsolete merchandise.
-            </p>
-          </div>
-          <div class="spec-card">
-            <h3>💳 Order & Payment Workflow</h3>
-            <p>
-              Buyers place orders with custom delivery options and upload proof-of-payment bank slips. Sellers review orders and verify payment receipts in real time before fulfillment.
-            </p>
-          </div>
-          <div class="spec-card">
-            <h3>🗄️ Relational Database & MVC</h3>
-            <p>
-              Engineered with clean Laravel MVC design patterns and a robust MySQL schema modeling Users, Products, Orders, Order Items, and Payment Verification entities.
-            </p>
-          </div>
-        </div>
-
-        <!-- Screenshots Gallery -->
-        <div class="gallery-wrapper" id="indigenous-gallery">
-          <div class="gallery-header">
-            <div>
-              <p class="eyebrow">APPLICATION SCREENSHOTS</p>
-              <h3>Indigenous Community Marketplace Web Interface</h3>
-            </div>
-            <span class="gallery-counter">5 Screenshots · Click any image to enlarge</span>
-          </div>
-
-          <div class="desktop-screenshot-grid">
-            <div class="screenshot-item desktop-item" data-full="images/indigenous/homepage.png" data-caption="Indigenous Community Marketplace - Homepage & Mission Statement">
-              <div class="screenshot-thumb">
-                <img src="images/indigenous/homepage.png" alt="Marketplace Homepage" loading="lazy">
-                <div class="thumb-overlay"><span>🔍 Click to Enlarge</span></div>
-              </div>
-              <div class="caption-block">
-                <h4>01. Marketplace Homepage</h4>
-                <p>Landing page introducing the artisan initiative and turtle conservation efforts.</p>
-              </div>
-            </div>
-
-            <div class="screenshot-item desktop-item" data-full="images/indigenous/product_catalog.png" data-caption="Indigenous Community Marketplace - Product Catalog & Filtering">
-              <div class="screenshot-thumb">
-                <img src="images/indigenous/product_catalog.png" alt="Product Catalog" loading="lazy">
-                <div class="thumb-overlay"><span>🔍 Click to Enlarge</span></div>
-              </div>
-              <div class="caption-block">
-                <h4>02. Product Catalog & Filter</h4>
-                <p>Searchable catalog with real-time category filtering and product grid view.</p>
-              </div>
-            </div>
-
-            <div class="screenshot-item desktop-item" data-full="images/indigenous/product_detail.png" data-caption="Indigenous Community Marketplace - Product Details & Purchase Action">
-              <div class="screenshot-thumb">
-                <img src="images/indigenous/product_detail.png" alt="Product Details" loading="lazy">
-                <div class="thumb-overlay"><span>🔍 Click to Enlarge</span></div>
-              </div>
-              <div class="caption-block">
-                <h4>03. Product Detail Page</h4>
-                <p>In-depth item descriptions, artisan background, stock availability, and cart order buttons.</p>
-              </div>
-            </div>
-
-            <div class="screenshot-item desktop-item" data-full="images/indigenous/product_manage.png" data-caption="Indigenous Community Marketplace - Seller Product Inventory Management (CRUD)">
-              <div class="screenshot-thumb">
-                <img src="images/indigenous/product_manage.png" alt="Seller Product Management" loading="lazy">
-                <div class="thumb-overlay"><span>🔍 Click to Enlarge</span></div>
-              </div>
-              <div class="caption-block">
-                <h4>04. Product Management (CRUD)</h4>
-                <p>Seller portal interface for creating, editing, and managing merchandise catalog.</p>
-              </div>
-            </div>
-
-            <div class="screenshot-item desktop-item" data-full="images/indigenous/seller_dashboard.png" data-caption="Indigenous Community Marketplace - Seller Dashboard & Order Overview">
-              <div class="screenshot-thumb">
-                <img src="images/indigenous/seller_dashboard.png" alt="Seller Dashboard" loading="lazy">
-                <div class="thumb-overlay"><span>🔍 Click to Enlarge</span></div>
-              </div>
-              <div class="caption-block">
-                <h4>05. Seller Analytics Dashboard</h4>
-                <p>Order monitoring, recent purchases, and buyer payment slip review module.</p>
-              </div>
-            </div>
-          </div>
-        </div>
+      <article class="project-index-entry project-index-entry-reverse project-index-entry-mobile" aria-labelledby="fittrack-v2-heading">
+        <a class="project-preview" href="/projects/fittrack-v2/" aria-label="Explore the FitTrack V2 case study"><img src="/images/fittrack_V2/home1.png" width="390" height="847" alt="The current workout, activity summary and shortcuts to supporting tools." loading="lazy" decoding="async"><span class="project-preview-note">Home dashboard <span aria-hidden="true">↗</span></span></a>
+        <div class="project-entry-copy"><p class="project-label">03 / Mobile Application</p><h2 id="fittrack-v2-heading">FitTrack V2 — Workout Planner</h2><p>A Flutter application exploring workout planning and the challenge of bringing several fitness tools into a small screen.</p><p class="project-contribution">Individual Developer</p><p class="project-stack">Flutter · Dart</p><a class="project-cta" href="/projects/fittrack-v2/">Explore Case Study <span aria-hidden="true">↗</span></a></div>
       </article>
-
-
-      <!-- ========================================================================= -->
-      <!-- PROJECT 03: NexaTech Notification System -->
-      <!-- ========================================================================= -->
-      <article class="project-detail-section" id="nexatech">
-        <div class="project-header">
-          <div class="project-meta">
-            <span class="badge">03 / DISTRIBUTED SYSTEMS & REAL-TIME</span>
-            <span class="tag-status">High Availability Backend</span>
-          </div>
-          <h2>NexaTech Notification System</h2>
-          <p class="project-lead">
-            A distributed, fault-tolerant real-time notification platform built with Node.js, Socket.IO, and Redis Pub/Sub. Designed for institutional lecturer-student announcements with cross-server synchronization and client-side automatic server failover.
-          </p>
-
-          <div class="project-tags">
-            <span>Node.js</span>
-            <span>Socket.IO</span>
-            <span>Redis Pub/Sub</span>
-            <span>WebSocket</span>
-            <span>Distributed Architecture</span>
-            <span>Server Failover</span>
-          </div>
-
-          <div class="project-cta-group">
-            <a href="https://github.com/ferryyirwan/nexatech-notification-system" target="_blank" rel="noopener noreferrer" class="btn primary">
-              View on GitHub ↗
-            </a>
-            <a href="#nexatech-gallery" class="btn secondary">
-              View Screenshots (3) ↓
-            </a>
-          </div>
-        </div>
-
-        <!-- Project Highlights Grid -->
-        <div class="project-specs-grid">
-          <div class="spec-card">
-            <h3>⚡ Real-Time WebSocket Delivery</h3>
-            <p>
-              Leverages Socket.IO for low-latency bidirectional message dispatch, allowing lecturers to broadcast critical classroom notices instantly to all connected student clients.
-            </p>
-          </div>
-          <div class="spec-card">
-            <h3>🔄 Redis Pub/Sub Synchronization</h3>
-            <p>
-              Employs Redis message publishing and subscription to synchronize events across independent application instances (Server 1 and Server 2), eliminating isolated silos.
-            </p>
-          </div>
-          <div class="spec-card">
-            <h3>🛡️ Automatic Server Failover</h3>
-            <p>
-              Engineered with resilient client-side failover logic: if the active primary server crashes or disconnects, the client instantly reconnects to the backup server without dropping message history.
-            </p>
-          </div>
-          <div class="spec-card">
-            <h3>👥 Role Interaction & Presence</h3>
-            <p>
-              Features dedicated lecturer broadcast permissions, student question and acknowledgment replies, and live connected user count monitoring across both cluster nodes.
-            </p>
-          </div>
-        </div>
-
-        <!-- Screenshots Gallery -->
-        <div class="gallery-wrapper" id="nexatech-gallery">
-          <div class="gallery-header">
-            <div>
-              <p class="eyebrow">APPLICATION SCREENSHOTS</p>
-              <h3>NexaTech Distributed System in Action</h3>
-            </div>
-            <span class="gallery-counter">3 Screenshots · Click any image to enlarge</span>
-          </div>
-
-          <div class="desktop-screenshot-grid">
-            <div class="screenshot-item desktop-item" data-full="images/nexatech/dashboard.png" data-caption="NexaTech Notification System - Main Dashboard with Role Authentication & Live Feed">
-              <div class="screenshot-thumb">
-                <img src="images/nexatech/dashboard.png" alt="NexaTech Main Dashboard" loading="lazy">
-                <div class="thumb-overlay"><span>🔍 Click to Enlarge</span></div>
-              </div>
-              <div class="caption-block">
-                <h4>01. Main Dashboard & Announcement Feed</h4>
-                <p>Role-based interface displaying active announcements, connected participants, and reply feeds.</p>
-              </div>
-            </div>
-
-            <div class="screenshot-item desktop-item" data-full="images/nexatech/multi-server.png" data-caption="NexaTech Notification System - Multi-Server Communication via Redis Pub/Sub (Server 1 & Server 2)">
-              <div class="screenshot-thumb">
-                <img src="images/nexatech/multi-server.png" alt="Multi-Server Communication" loading="lazy">
-                <div class="thumb-overlay"><span>🔍 Click to Enlarge</span></div>
-              </div>
-              <div class="caption-block">
-                <h4>02. Multi-Server Redis Synchronization</h4>
-                <p>Demonstrating cross-server message propagation between Server 1 and Server 2 via Redis.</p>
-              </div>
-            </div>
-
-            <div class="screenshot-item desktop-item" data-full="images/nexatech/failover.png" data-caption="NexaTech Notification System - Seamless Client-Side Server Failover Recovery">
-              <div class="screenshot-thumb">
-                <img src="images/nexatech/failover.png" alt="Server Failover" loading="lazy">
-                <div class="thumb-overlay"><span>🔍 Click to Enlarge</span></div>
-              </div>
-              <div class="caption-block">
-                <h4>03. Client-Side Server Failover</h4>
-                <p>Automated detection of primary server failure with transparent switchover to backup instance.</p>
-              </div>
-            </div>
-          </div>
-        </div>
+      <article class="project-index-entry" aria-labelledby="nexatech-heading">
+        <a class="project-preview" href="/projects/nexatech/" aria-label="Explore the NexaTech Notification System case study"><img src="/images/nexatech/dashboard.png" width="1895" height="970" alt="A connected student view with lecturer announcements, responses and online users." loading="lazy" decoding="async"><span class="project-preview-note">Notification dashboard <span aria-hidden="true">↗</span></span></a>
+        <div class="project-entry-copy"><p class="project-label">04 / Real-Time / Distributed Systems Project</p><h2 id="nexatech-heading">NexaTech Notification System</h2><p>An exploration of event-driven communication, with lecturer announcements and student responses across connected clients.</p><p class="project-contribution">Individual Developer</p><p class="project-stack">Node.js · WebSockets · Socket.IO · Redis Pub/Sub</p><a class="project-cta" href="/projects/nexatech/">Explore Case Study <span aria-hidden="true">↗</span></a></div>
       </article>
-
-
-      <!-- ========================================================================= -->
-      <!-- PROJECT 04: Weather Analytics -->
-      <!-- ========================================================================= -->
-      <article class="project-detail-section" id="weather">
-        <div class="project-header">
-          <div class="project-meta">
-            <span class="badge">04 / DESKTOP APPLICATION & DATA</span>
-            <span class="tag-status">Decision Support System</span>
-          </div>
-          <h2>Weather Analytics & Forecast Decision Support</h2>
-          <p class="project-lead">
-            A desktop analytics and decision support application developed using Electron and modern JavaScript. Integrates live meteorological data from WeatherAPI to provide predictive forecasting, automated rain risk analysis, and weather-driven activity planning across Malaysia.
-          </p>
-
-          <div class="project-tags">
-            <span>Electron</span>
-            <span>JavaScript</span>
-            <span>WeatherAPI</span>
-            <span>HTML5 & CSS3</span>
-            <span>LocalStorage</span>
-            <span>Data Visualization</span>
-          </div>
-
-          <div class="project-cta-group">
-            <a href="https://github.com/ferryyirwan/weather-app-electron" target="_blank" rel="noopener noreferrer" class="btn primary">
-              View on GitHub ↗
-            </a>
-            <a href="#weather-gallery" class="btn secondary">
-              View Screenshots (3) ↓
-            </a>
-          </div>
-        </div>
-
-        <!-- Project Highlights Grid -->
-        <div class="project-specs-grid">
-          <div class="spec-card">
-            <h3>🇲🇾 Malaysia Multi-City Weather</h3>
-            <p>
-              Real-time API integration fetching current temperature, humidity, wind velocity, and atmospheric condition metrics for cities and states throughout Malaysia.
-            </p>
-          </div>
-          <div class="spec-card">
-            <h3>📅 Extended & Hourly Timelines</h3>
-            <p>
-              Comprehensive meteorological timelines displaying hourly temperature progression and 3-day extended forecasts for proactive daily scheduling.
-            </p>
-          </div>
-          <div class="spec-card">
-            <h3>🧠 Decision Support Engine</h3>
-            <p>
-              Algorithmic decision support calculating rain risk percentages, extreme heat warnings, and intelligent outdoor vs. indoor activity safety recommendations.
-            </p>
-          </div>
-          <div class="spec-card">
-            <h3>📋 Activity Planner CRUD</h3>
-            <p>
-              Full-featured personal schedule planner with LocalStorage persistence, allowing users to save, edit, and organize events aligned with forecast conditions.
-            </p>
-          </div>
-        </div>
-
-        <!-- Screenshots Gallery -->
-        <div class="gallery-wrapper" id="weather-gallery">
-          <div class="gallery-header">
-            <div>
-              <p class="eyebrow">APPLICATION SCREENSHOTS</p>
-              <h3>Weather Analytics Desktop Application</h3>
-            </div>
-            <span class="gallery-counter">3 Screenshots · Click any image to enlarge</span>
-          </div>
-
-          <div class="desktop-screenshot-grid">
-            <div class="screenshot-item desktop-item" data-full="images/weather/dashboard.png" data-caption="Weather Analytics - Main Desktop Dashboard with Live Metrics & Forecast">
-              <div class="screenshot-thumb">
-                <img src="images/weather/dashboard.png" alt="Weather Dashboard" loading="lazy">
-                <div class="thumb-overlay"><span>🔍 Click to Enlarge</span></div>
-              </div>
-              <div class="caption-block">
-                <h4>01. Main Analytics Dashboard</h4>
-                <p>Live meteorological indicators, hourly forecasts, and regional weather conditions overview.</p>
-              </div>
-            </div>
-
-            <div class="screenshot-item desktop-item" data-full="images/weather/activity-planner.png" data-caption="Weather Analytics - Activity Planner Module with Weather Correlation">
-              <div class="screenshot-thumb">
-                <img src="images/weather/activity-planner.png" alt="Activity Planner" loading="lazy">
-                <div class="thumb-overlay"><span>🔍 Click to Enlarge</span></div>
-              </div>
-              <div class="caption-block">
-                <h4>02. Interactive Activity Planner</h4>
-                <p>Task and event management system with weather-driven suitability indicators.</p>
-              </div>
-            </div>
-
-            <div class="screenshot-item desktop-item" data-full="images/weather/decision-support.png" data-caption="Weather Analytics - Decision Support Engine, Rain Risk & Weather Alerts">
-              <div class="screenshot-thumb">
-                <img src="images/weather/decision-support.png" alt="Decision Support System" loading="lazy">
-                <div class="thumb-overlay"><span>🔍 Click to Enlarge</span></div>
-              </div>
-              <div class="caption-block">
-                <h4>03. Decision Support & Alert Engine</h4>
-                <p>Automated risk assessment algorithms providing clear recommendations for outdoor operations.</p>
-              </div>
-            </div>
-          </div>
-        </div>
+      <article class="project-index-entry project-index-entry-reverse" aria-labelledby="weather-analytics-heading">
+        <a class="project-preview" href="/projects/weather-analytics/" aria-label="Explore the Weather Analytics &amp; Forecast DSS case study"><img src="/images/weather/dashboard.png" width="1920" height="1080" alt="Current weather in Bahau with hourly and daily forecast panels." loading="lazy" decoding="async"><span class="project-preview-note">Weather dashboard <span aria-hidden="true">↗</span></span></a>
+        <div class="project-entry-copy"><p class="project-label">05 / Desktop Decision Support Application</p><h2 id="weather-analytics-heading">Weather Analytics &amp; Forecast DSS</h2><p>An Electron learning project turning API weather data into a dashboard and practical activity-planning interface.</p><p class="project-contribution">Individual Developer</p><p class="project-stack">Electron · JavaScript · WeatherAPI</p><a class="project-cta" href="/projects/weather-analytics/">Explore Case Study <span aria-hidden="true">↗</span></a></div>
       </article>
-
     </div>
-
-    <!-- Bottom Contact & GitHub Banner -->
-    <section class="section showcase-footer-cta">
-      <div class="cta-inner">
-        <p class="eyebrow">MORE ON GITHUB</p>
-        <h2>Interested in the Source Code?</h2>
-        <p>
-          All repositories are publicly hosted with detailed setup guides, technical documentation, and commit histories.
-        </p>
-        <div class="contact-links">
-          <a href="https://github.com/ferryyirwan" target="_blank" rel="noopener noreferrer" class="btn primary">
-            Visit GitHub Profile (@ferryyirwan) ↗
-          </a>
-          <a href="https://www.linkedin.com/in/ferry-irwan-shah-azman-889b25428/" target="_blank" rel="noopener noreferrer" class="btn secondary">
-            Connect on LinkedIn ↗
-          </a>
-          <a href="index.html#contact" class="btn secondary">
-            Get in Touch
-          </a>
-        </div>
-      </div>
-    </section>
+    <section class="project-container project-endnote" aria-labelledby="project-contact-heading"><div><p class="project-label">Keep the conversation going</p><h2 id="project-contact-heading">More to learn.<br>More to build.</h2><p>These projects are part of my journey as a Computer Science student.</p></div><a class="project-cta" href="/#contact">Get in Touch <span aria-hidden="true">↗</span></a></section>
   </main>
 
-  <!-- Interactive Lightbox Modal -->
-  <div id="image-lightbox" class="lightbox-modal" role="dialog" aria-hidden="true" aria-label="Image Preview">
-    <div class="lightbox-backdrop"></div>
-    <div class="lightbox-content">
-      <button class="lightbox-back-btn" aria-label="Go back to portfolio">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <line x1="19" y1="12" x2="5" y2="12"></line>
-          <polyline points="12 19 5 12 12 5"></polyline>
-        </svg>
-        <span>Back</span>
-      </button>
-      <button class="lightbox-close" aria-label="Close modal">&times;</button>
-      <div class="lightbox-image-wrap">
-        <img id="lightbox-img" src="" alt="Screenshot preview">
-      </div>
-      <p id="lightbox-caption" class="lightbox-caption"></p>
-      <button class="lightbox-bottom-back" aria-label="Back to page">
-        <span>← Back to page</span>
-      </button>
-    </div>
-  </div>
-
-  <footer>
-    <p>© <span id="year"></span> Ferry Irwan Shah Azman. Built with HTML, CSS & JavaScript · Hosted on GitHub</p>
+  <footer class="site-footer">
+    <svg class="social-icon-sprite" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><symbol id="social-github" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.09-.745.083-.729.083-.729 1.205.084 1.84 1.237 1.84 1.237 1.07 1.835 2.807 1.305 3.492.998.108-.776.418-1.305.762-1.605-2.665-.303-5.467-1.332-5.467-5.93 0-1.31.47-2.381 1.235-3.221-.124-.303-.535-1.523.117-3.176 0 0 1.008-.322 3.3 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.046.138 3.006.404 2.289-1.552 3.294-1.23 3.294-1.23.655 1.653.244 2.873.12 3.176.77.84 1.232 1.911 1.232 3.221 0 4.61-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .322.216.694.825.576C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></symbol><symbol id="social-linkedin" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.35V9h3.414v1.561h.049c.476-.9 1.637-1.85 3.37-1.85 3.601 0 4.27 2.37 4.27 5.455v6.286zM5.337 7.433a2.062 2.062 0 1 1 0-4.124 2.062 2.062 0 0 1 0 4.124zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729V22.27C0 23.226.792 24 1.771 24h20.451C23.2 24 24 23.226 24 22.27V1.729C24 .774 23.2 0 22.222 0z"/></symbol><symbol id="social-instagram" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5.2" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="18.2" cy="5.8" r="1" fill="currentColor"/></symbol></svg>
+    <div class="site-footer-inner"><div><a class="site-footer-brand" href="/">Ferry Irwan.</a><p>&copy; <span id="year"></span> · Designed & Built by Ferry</p><div class="site-footer-socials" role="group" aria-label="Social profiles"><a class="social-icon-link" href="https://github.com/ferryyirwan" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><svg aria-hidden="true" focusable="false"><use href="#social-github"></use></svg></a><a class="social-icon-link" href="https://www.linkedin.com/in/ferry-irwan-shah-azman-889b25428/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg aria-hidden="true" focusable="false"><use href="#social-linkedin"></use></svg></a><a class="social-icon-link" href="https://www.instagram.com/frywnsh?psln=MW9sdXI3djBjdHd5ZA%3D%3D&amp;utm_source=qr" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg aria-hidden="true" focusable="false" class="social-icon-instagram"><use href="#social-instagram"></use></svg></a></div></div><nav aria-label="Footer navigation"><a href="/">Home</a><a href="/about.html">About</a><a href="/projects/">Projects</a><a href="/resume/">Resume</a><a href="/#contact">Contact</a></nav></div>
   </footer>
 </body>
 </html>
